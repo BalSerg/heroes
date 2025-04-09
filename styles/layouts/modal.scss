@@ -1,0 +1,389 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  display: none;
+
+  background: rgba(30, 30, 30, 0.5);
+
+  &.active {
+    display: block;
+
+    &.is-mobile {
+      display: none;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    min-width: 760px;
+    width: 40%;
+    padding: $Spacing-4;
+    box-sizing: border-box;
+    max-height: 80%;
+
+    border-radius: $Radius-3;
+    background: $sepia;
+    box-shadow: 0 8px 18px -6px rgba(24, 39, 75, 0.12), 0 12px 42px -4px rgba(24, 39, 75, 0.12);
+
+    transform: translate(-50%, -50%);
+  }
+
+  &-cross {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+    transform: rotate(0);
+    transition: $transition-out;
+
+    &:hover {
+      transform: rotate(180deg);
+      transition: $transition-in;
+    }
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 7px;
+
+      width: 2px;
+      height: 100%;
+
+      background: var(--text-gray);
+
+      content: "";
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-img {
+    text-align: center;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &-title {
+    @include font24-semibold;
+
+    margin: 0 0 $Spacing-5;
+
+    color: var(--text-color-primary);
+  }
+
+  .form-for-input__input {
+    margin: 0 0 $Spacing-7;
+  }
+
+  .form-buttons {
+    padding: 0;
+  }
+
+  &-form {
+    .modal-wrapper {
+      max-width: 456px;
+      min-width: auto;
+    }
+  }
+
+  &-auth {
+    background: $sepia;
+
+    &-logo {
+      position: absolute;
+      top: 26px;
+      left: 22px;
+      z-index: 3;
+    }
+
+    &-cross {
+      z-index: 3;
+
+      width: 52px;
+      height: 52px;
+
+      background: rgba(30, 30, 30, 0.06);
+      border-radius: 50%;
+
+      &:after,
+      &:before {
+        top: 9px;
+        left: 25px;
+
+        height: 35px;
+      }
+    }
+
+    .modal {
+      &-wrapper {
+        top: 0;
+        left: 0;
+
+        box-shadow: none;
+        min-width: auto;
+        max-height: none;
+        width: 100%;
+        height: 100%;
+
+        background: url("../images/backgr.png") center no-repeat;
+        border-radius: 0;
+
+        transform: none;
+      }
+
+      &-content {
+        @include position-center;
+
+        max-height: calc(100% - 130px);
+        width: calc(100% - 76px);
+        overflow: auto;
+        margin: 20px 0 0;
+        padding: $Spacing-5;
+        box-sizing: border-box;
+
+        scrollbar-width: thin;
+        scrollbar-color: $sepia2 transparent;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          border: 4px solid $sepia2;
+        }
+      }
+
+      &-title {
+        @include font62-Lora-semibold;
+
+        margin: 0 auto $Spacing-5;
+        max-width: 650px;
+
+        color: var(--text-color-primary);
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      &-text {
+        @include font18-medium;
+
+        margin: 0 auto $Spacing-5;
+        max-width: 650px;
+
+        color: var(--text-color-primary);
+        text-align: center;
+      }
+    }
+
+    .opacity-layer {
+      display: none;
+    }
+  }
+
+  &-choose {
+    .modal-title {
+      margin: 0 0 $Spacing-4;
+    }
+  }
+
+  &-info {
+    @include font16;
+
+    padding: $Spacing-4;
+    box-sizing: border-box;
+    margin: 0 0 60px;
+
+    color: var(--text-color-primary);
+    text-align: center;
+
+    background: $sepia;
+    border-radius: $Radius-2;
+    border: 1px solid $sepia2;
+  }
+
+  &-for-button {
+    text-align: center;
+  }
+
+  &-button {
+    @include button-colored($white, $orange, $orange2);
+    @include font20-semibold;
+
+    display: inline-block;
+  }
+
+  &-manual {
+    z-index: 2;
+  }
+
+  &-final {
+    .modal {
+      &-title {
+        @include font48-Lora-semibold;
+
+        max-width: 560px;
+        margin: 0 auto $Spacing-4;
+      }
+
+      &-text {
+        max-width: 560px;
+        margin: 0 auto $Spacing-5;
+      }
+
+      &-info {
+        max-width: 560px;
+        margin: 0 auto 60px;
+      }
+    }
+  }
+
+  &-list-of-links {
+    .manual-links {
+      padding: 0;
+    }
+  }
+}
+
+@include tablet {
+  .modal-auth {
+    .modal {
+      &-content {
+        padding: $Spacing-5 0;
+      }
+
+      &-title {
+        @include font48-Lora-semibold;
+
+        max-width: 470px;
+        margin: 0 auto 32px;
+      }
+
+      &-text {
+        max-width: 470px;
+        margin: 0 auto 32px;
+      }
+    }
+  }
+
+  .modal {
+    .timeline {
+      &__item {
+        &-title {
+          > div {
+            display: none;
+          }
+
+          > span {
+            @include font20-semibold;
+
+            display: block;
+            margin: 0 0 $Spacing-3;
+          }
+        }
+      }
+
+      &-list {
+        padding: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &-final {
+      .modal {
+        &-title {
+          @include font32-Lora-semibold;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .modal {
+    &-title {
+      @include font20-semibold;
+    }
+
+    &.active.is-mobile {
+      display: block;
+    }
+
+    &-wrapper {
+      min-width: auto;
+      width: 95%;
+      max-height: none;
+    }
+  }
+
+  .modal-auth {
+    &-cross {
+      width: 36px;
+      height: 36px;
+
+      &:before,
+      &:after {
+        top: 6px;
+        left: 18px;
+
+        height: 24px;
+      }
+    }
+
+    .modal {
+      &-wrapper {
+        padding: $Spacing-3;
+      }
+
+      &-content {
+        padding: $Spacing-3;
+        width: calc(100% - 64px);
+      }
+
+      &-title {
+        @include font29-Lora-semibold;
+
+        max-width: 340px;
+        margin: 0 auto 32px;
+      }
+
+      &-text {
+        max-width: 340px;
+        margin: 0 auto 32px;
+      }
+
+      &-info {
+        margin: 0 0 $Spacing-5;
+      }
+    }
+  }
+}

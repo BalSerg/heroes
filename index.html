@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"/>
+    <meta name="description" content="Мы собрали материалы, проверенные экспертами Российской Академии Наук. Это поможет тебе эффективно подготовиться к экзаменам">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/index.js"></script>
+</head>
+<body>
+<main>
+    <header class="header js-header">
+        <div class="header-burger is-mobile js-burger">
+            <span></span>
+        </div>
+        <div class="header-logo">
+            <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-desktop js-logo"><img  src="images/logo1.svg" alt=""/></a>
+            <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-desktop is-dark-theme js-logo"><img src="images/logo1-dark.svg" alt=""/></a>
+            <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-tablet js-logo"><img src="images/logo-tablet.svg" alt=""/></a>
+            <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-mobile js-logo"><img src="images/logo-mobile.svg" alt=""/></a>
+            <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-mobile is-dark-theme js-logo"><img src="images/logo-mobile-dark.svg" alt=""/></a>
+        </div>
+        <div class="is-hidden header-no-logo js-for-search">
+            <div class="header-search js-search">
+                <div class="header-search-wrapper">
+                    <label>
+                        <div><img src="images/icon4.svg" alt=""/><img src="images/icon4-dark.svg" alt=""/></div>
+                        <form><input type="search" value="" name="search" class="js-input" placeholder="Найти ответ на вопрос" autocomplete="off"/></form>
+                        <button type="button" class="header-search-clear js-header-search-clear"></button>
+                    </label>
+                    <div class="header-search-result-content js-header-search-content">
+                        <div class="header-search-result js-header-search-result">
+                            <div class="header-search-result-wrapper js-header-search-wrapper">
+                                <div class="header-search-result__title">Результаты</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="header-button-auth js-modal-call-button-auth">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12 12.6666C12 11.1939 10.2091 9.99996 8 9.99996C5.79086 9.99996 4 11.1939 4 12.6666M8 7.99996C6.52724 7.99996 5.33333 6.80605 5.33333 5.33329C5.33333 3.86053 6.52724 2.66663 8 2.66663C9.47276 2.66663 10.6667 3.86053 10.6667 5.33329C10.6667 6.80605 9.47276 7.99996 8 7.99996Z" stroke="#2A2823" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Войти</span>
+        </button>
+        <div class="modal modal-auth js-modal-popup-auth">
+            <div class="modal-cross modal-auth-cross js-modal-cross-auth"></div>
+            <a class="modal-auth-logo" href="https://ru.ruwiki.ru" target="_blank"><img src="images/logo1.svg"></a>
+            <div class="modal-wrapper">
+                <div class="js-modal-wrapper is-hidden"></div>
+                <div class="modal-content">
+                    <div class="modal-title">Ваши герои <br/>— наша история!</div>
+                    <div class="modal-text is-desktop">Благодарим за желание поделиться историей вашего близкого человека – ветерана Великой Отечественной войны. Написание такой биографии – это вклад <br/> в сохранение памяти о героях и передачу исторической правды будущим поколениям.</div>
+                    <div class="modal-text is-tablet">Благодарим за желание поделиться историей вашего близкого человека – ветерана Великой Отечественной войны. </div>
+                    <form class="auth-form">
+                        <div class="auth-form-content">
+                            <div class="auth-form-title">⧼ Войти ⧽</div>
+                            <div class="form-for-input">
+                                <div class="form-for-input__title">Имя учётной записи</div>
+                                <input type="text" class="form-for-input__input js-login" value="" placeholder="Введите имя вашей учетной записи"/>
+                            </div>
+                            <div class="form-for-input">
+                                <div class="form-for-input__title">Пароль</div>
+                                <div class="for-password">
+                                    <input type="password" class="form-for-input__input js-password" value="" placeholder="Введите пароль"/>
+                                    <div class="js-show-password for-password-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M2.98924 11.4823C4.47211 12.9565 7.05819 14.9999 10.0004 14.9999C12.9426 14.9999 15.5282 12.9565 17.0111 11.4823C17.4021 11.0936 17.5983 10.8985 17.7229 10.5168C17.8117 10.2444 17.8117 9.75561 17.7229 9.48325C17.5983 9.10151 17.4022 8.90642 17.0111 8.51759C15.5282 7.0434 12.9426 5 10.0004 5C7.05819 5 4.47211 7.0434 2.98924 8.51759C2.59786 8.90669 2.40215 9.10137 2.27757 9.48325C2.18873 9.75561 2.18873 10.2444 2.27757 10.5168C2.40215 10.8986 2.59786 11.0932 2.98924 11.4823Z" stroke="#2A2823" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.33358 10C8.33358 10.9205 9.07977 11.6667 10.0002 11.6667C10.9207 11.6667 11.6669 10.9205 11.6669 10C11.6669 9.07953 10.9207 8.33333 10.0002 8.33333C9.07977 8.33333 8.33358 9.07953 8.33358 10Z" stroke="#2A2823" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auth-form-link">Нет аккаунта? <a href="https://ru.ruwiki.ru/wiki/Служебная:Создать_учётную_запись" target="_blank">Присоединиться</a></div>
+                        </div>
+                        <button type="button" class="auth-form-button js-login-user">Начать</button>
+                        <div class="auth-form-subtext">
+                            Продолжая, вы соглашаетесь с <a href="http://meta.ruwiki.ru/wiki/Условия_использования" target="_blank">Пользовательским соглашением</a> и подтверждаете, что понимаете <a href="https://meta.ruwiki.ru/wiki/Политика_конфиденциальности" target="_blank">Политику конфиденциальности</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="header-button is-mobile js-call-search is-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10.3333 10.3333L15 15M6.44444 11.8889C3.43756 11.8889 1 9.45133 1 6.44444C1 3.43756 3.43756 1 6.44444 1C9.45133 1 11.8889 3.43756 11.8889 6.44444C11.8889 9.45133 9.45133 11.8889 6.44444 11.8889Z" stroke="#1E1E1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <aside class="sidebar js-sidebar">
+            <div class="sidebar-head is-mobile">
+                <div class="sidebar-head-empty"></div>
+                <div class="sidebar-head-logo">
+                    <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-mobile js-logo"><img src="images/logo-mobile.svg" alt=""/></a>
+                    <a href=" https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="is-mobile is-dark-theme js-logo"><img src="images/logo-mobile-dark.svg" alt=""/></a>
+                </div>
+                <div class="sidebar-close js-burger-close"></div>
+            </div>
+            <div class="sidebar-top">
+                <div class="sidebar-info">
+                    <a href="https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="sidebar-info__item">
+                        <img src="images/icon1.svg" alt=""/>
+                        <span class="sidebar-info__item-text">Для вас</span>
+                    </a>
+                    <a href="https://ru.ruwiki.ru/wiki/Заглавная_страница" target="_blank" class="sidebar-info__item">
+                        <div><span class="js-current-date"></span></div>
+                        <span class="sidebar-info__item-text">Рекомендации</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <div class="sidebar-links__item js-modal-call-button">
+                        <img src="images/icon3.svg" alt=""/><span>Проекты РУВИКИ</span>
+                    </div>
+                    <a href="https://ru.ruwiki.ru/wiki/Рувики:Авторам" class="sidebar-links__item">
+                        <img src="images/icon6.svg" alt=""/><span>Стать автором</span>
+                    </a>
+                    <div class="sidebar-links-popup js-modal-popup-link js-modal">
+                        <div class="sidebar-links-popup-wrapper js-modal-wrapper-links">
+                            <div class="sidebar-links-popup-cross js-modal-cross-links"></div>
+                            <div class="sidebar-links__title">Проекты</div>
+                            <div class="sidebar-links__item">
+                                <a href="https://ru.ruwiki.ru/wiki/Проект:Выставка_достижений_народного_хозяйства" target="_blank"><img src="images/icon-link1.svg" alt=""/>ВДНХ</a>
+                            </div>
+                            <div class="sidebar-links__item">
+                                <a href="https://ru.ruwiki.ru/wiki/Проект:Ваши_герои_—_наша_история" target="_blank"><img src="images/icon-link2.svg" alt=""/>Ваши герои — наша история</a>
+                            </div>
+                            <div class="sidebar-links__item">
+                                <a href="https://ru.ruwiki.ru/wiki/Проект:Государственный исторический музей" target="_blank"><img src="images/icon-link3.svg" alt=""/>Государственный исторический музей</a>
+                            </div>
+                            <div class="sidebar-links__item">
+                                <a href="https://ru.ruwiki.ru/wiki/Проект:Департамент_транспорта_Москвы" target="_blank"><img src="images/icon-link4.svg" alt=""/>Департамент транспорта Москвы</a>
+                            </div>
+                            <div class="sidebar-links__item">
+                                <a href="/" target="_blank"><img src="images/icon-link5.svg" alt=""/>Подборка материалов к ОГЭ/ЕГЭ</a>
+                            </div>
+                            <div class="sidebar-links__item">
+                                <a href="https://ru.ruwiki.ru/wiki/Проект:Московский_планетарий" target="_blank"><img src="images/icon-link6.svg" alt=""/>Московский планетарий</a>
+                            </div>
+                            <div class="sidebar-links__item">
+                                <a href="https://ru.ruwiki.ru/wiki/Проект:Музейное_объединение_Музей_Москвы" target="_blank"><img src="images/icon-link7.svg" alt=""/>Музей Москвы</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-bottom">
+                <div class="sidebar-settings">
+                    <div class="sidebar-settings-button js-modal-call-button">
+                        <img src="images/icon5.svg" alt=""/>
+                        <span>Настроить вид</span>
+                    </div>
+                    <div class="settings js-modal-popup-settings js-modal">
+                        <div class="settings-wrapper js-modal-wrapper-settings">
+                            <div class="settings-cross js-modal-cross-settings"></div>
+                            <div class="settings-title">Режим чтения</div>
+                            <div class="settings-size">
+                                <div class="settings-size-info">
+                                    <div class="settings-size__title">Размер текста</div>
+                                    <div class="settings-size__text js-size-text">По умолчанию</div>
+                                </div>
+                                <div class="settings-size-buttons">
+                                    <label class="settings-size-buttons__item">
+                                        <input type="radio" class="js-buttons-size" name="set-size" data-info="Мелкий" data-class="text-small"/>
+                                        <div>А</div>
+                                    </label>
+                                    <label class="settings-size-buttons__item active">
+                                        <input type="radio" class="js-buttons-size" name="set-size" data-info="По умолчанию" data-class="text-medium"/>
+                                        <div>А</div>
+                                    </label>
+                                    <label class="settings-size-buttons__item">
+                                        <input type="radio" class="js-buttons-size" name="set-size" data-info="Крупный" data-class="text-big"/>
+                                        <div>А</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-font">
+                                <label class="settings-font__item">
+                                    <input type="radio" class="js-buttons-font" name="set-font" data-class="family-serif"/>
+                                    <div>Аа</div>
+                                    <span>Бумага</span>
+                                </label>
+                                <label class="settings-font__item active">
+                                    <input type="radio" class="js-buttons-font" name="set-font" data-class="family-sans-serif"/>
+                                    <div>Аа</div>
+                                    <span>Фокус</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-icon is-tablet js-modal-call-button-footer">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g id="Warning / Info">
+                                <path id="Vector" d="M12 11V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12.0498 8V8.1L11.9502 8.1002V8H12.0498Z" stroke="#1E1E1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer js-modal-popup-footer">
+                    <div class="footer-wrapper js-modal-wrapper-footer">
+                        <div class="sidebar-links-popup-cross js-modal-cross-links is-hidden"></div>
+                        <a href="https://company.ruwiki.ru/" target="_blank">О РУВИКИ</a>
+                        <a href="https://meta.ruwiki.ru/wiki/Краткие_правила" target="_blank">Краткие правила</a>
+                        <a href="https://meta.ruwiki.ru/wiki/Редакционные_ценности" target="_blank">Ценности редакции</a>
+                        <a href="https://meta.ruwiki.ru/wiki/Лицензия" target="_blank">Лицензирование</a>
+                        <div class="js-call-more more">Ещё <span></span>
+                            <div class="footer-popup js-popup-more">
+                                <div class="">
+                                    <a href="http://meta.ruwiki.ru/wiki/Условия_использования" class="popup-more__item">Условия использования</a>
+                                    <a href="https://meta.ruwiki.ru/wiki/Политика_конфиденциальности" class="popup-more__item">Политика конфиденциальности</a>
+                                    <!-- Пока не надо
+                                    <a href="#" class="popup-more__item">Обсуждение</a>
+                                    <a href="#" class="popup-more__item">Вклад</a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-info">2 023 805 статей на русском языке</div>
+                        <div class="sidebar-net is-no-desktop">
+                            <div class="sidebar-net-title">«РУВИКИ» в соцсетях</div>
+                            <div class="sidebar-net-links">
+                                <a href="https://t.me/ruwikiofficial" target="_blank"><img src="images/icon-tg.svg" alt=""/></a>
+                                <a href="https://vk.com/ruwikiofficial?ysclid=m2opls8ff3959687074" target="_blank"><img src="images/icon-vk.svg" alt=""/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-net is-no-tablet">
+                <div class="sidebar-net-title">«РУВИКИ» в соцсетях</div>
+                <div class="sidebar-net-links">
+                    <a href="https://t.me/ruwikiofficial" target="_blank"><img src="images/icon-tg.svg" alt=""/></a>
+                    <a href="https://vk.com/ruwikiofficial?ysclid=m2opls8ff3959687074" target="_blank"><img src="images/icon-vk.svg" alt=""/></a>
+                </div>
+            </div>
+        </aside>
+        <div class="timeline">
+            <div class="timeline__item js-timeline-item is-current t1">
+                <div class="timeline__item-title">
+                    <div class="js-modal-call-button-timeline"><span>1</span></div>
+                    <span class="js-section-name">Биография</span>
+                </div>
+                <div class="timeline-list is-no-mobile">
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Личные данные</span>
+                    </div>
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Ранние годы и образование</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal js-modal-popup-timeline is-mobile">
+                <div class="js-modal-wrapper settings-wrapper">
+                    <div class="modal-cross js-modal-cross"></div>
+                    <div class="modal-content">
+                        <div class="timeline__item-title">
+                            <div><span>1</span></div>
+                            <span class="js-section-name">Биография</span>
+                        </div>
+                        <div class="timeline__item-text">
+                            Заполните, пожалуйста, информацию
+                        </div>
+                        <div class="timeline-list">
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Личные данные</span>
+                            </div>
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Ранние годы и образование</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline__item js-timeline-item t2">
+                <div class="timeline__item-title">
+                    <div class="js-modal-call-button-timeline"><span>2</span></div>
+                    <span class="js-section-name">Участие в Великой Отечественной войне</span>
+                </div>
+                <div class="timeline-list is-no-mobile">
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Призыв</span>
+                    </div>
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Участия в боевых действиях</span>
+                    </div>
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Завершение боевого пути</span>
+                    </div>
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Награды</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal js-modal-popup-timeline is-mobile">
+                <div class="js-modal-wrapper settings-wrapper">
+                    <div class="modal-cross  js-modal-cross"></div>
+                    <div class="modal-content">
+                        <div class="timeline__item-title">
+                            <div><span>2</span></div>
+                            <span class="js-section-name">Участие в Великой Отечественной войне</span>
+                        </div>
+                        <div class="timeline__item-text">
+                            Заполните, пожалуйста, информацию
+                        </div>
+                        <div class="timeline-list">
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Призыв</span>
+                            </div>
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Участия в боевых действиях</span>
+                            </div>
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Завершение боевого пути</span>
+                            </div>
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Награды</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline__item js-timeline-item t3">
+                <div class="timeline__item-title">
+                    <div class="js-modal-call-button-timeline"><span>3</span></div>
+                    <span class="js-section-name">Послевоенный период</span>
+                </div>
+                <div class="timeline-list is-no-mobile">
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Ключевые моменты жизни</span>
+                    </div>
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Семья</span>
+                    </div>
+                    <div class="timeline-list__item js-for-block">
+                        <div></div>
+                        <span>Окончание жизни</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal js-modal-popup-timeline is-mobile">
+                <div class="js-modal-wrapper settings-wrapper">
+                    <div class="modal-cross  js-modal-cross"></div>
+                    <div class="modal-content">
+                        <div class="timeline__item-title">
+                            <div><span>3</span></div>
+                            <span class="js-section-name">Послевоенный период</span>
+                        </div>
+                        <div class="timeline__item-text">
+                            Заполните, пожалуйста, информацию
+                        </div>
+                        <div class="timeline-list">
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Ключевые моменты жизни</span>
+                            </div>
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Семья</span>
+                            </div>
+                            <div class="timeline-list__item js-for-block">
+                                <div></div>
+                                <span>Дата смерти</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline__item js-timeline-item">
+                <div class="timeline__item-title">
+                    <div><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M11.2738 4.07502C11.505 3.57368 11.6207 3.32301 11.7803 3.24482C11.9191 3.17686 12.0814 3.17686 12.2202 3.24482C12.3798 3.32301 12.4954 3.57368 12.7267 4.07502L14.634 8.21018C14.7025 8.35854 14.7367 8.43272 14.7886 8.48978C14.8346 8.54027 14.8904 8.58082 14.9526 8.60893C15.0229 8.64068 15.1041 8.6503 15.2663 8.66954L19.7885 9.20571C20.3367 9.27072 20.6109 9.30322 20.7346 9.43089C20.8421 9.54184 20.8922 9.69627 20.8705 9.84922C20.8455 10.0252 20.6428 10.2126 20.2374 10.5875L16.8941 13.6793C16.7741 13.7903 16.7142 13.8457 16.6759 13.9127C16.6421 13.9721 16.6208 14.0377 16.6133 14.1055C16.6048 14.1822 16.6207 14.2623 16.6526 14.4226L17.5401 18.8891C17.6477 19.4306 17.7015 19.7014 17.6183 19.8585C17.546 19.995 17.4146 20.0905 17.2624 20.117C17.0873 20.1476 16.8464 20.0128 16.3647 19.7431L12.391 17.5188C12.2484 17.439 12.1771 17.3991 12.1016 17.3835C12.0347 17.3696 11.9657 17.3696 11.8989 17.3835C11.8233 17.3991 11.7521 17.439 11.6095 17.5188L7.63582 19.7431C7.15405 20.0128 6.91317 20.1476 6.73805 20.117C6.58586 20.0905 6.4545 19.995 6.3822 19.8585C6.299 19.7014 6.3528 19.4306 6.4604 18.8891L7.3479 14.4226C7.37974 14.2623 7.39566 14.1822 7.38719 14.1055C7.37969 14.0377 7.35837 13.9721 7.32455 13.9127C7.28633 13.8457 7.22635 13.7903 7.1064 13.6793L3.76304 10.5875C3.35769 10.2126 3.15502 10.0252 3.12999 9.84922C3.10823 9.69627 3.15841 9.54184 3.26591 9.43089C3.38961 9.30322 3.66374 9.27072 4.21201 9.20571L8.73418 8.66954C8.89643 8.6503 8.97755 8.64068 9.04786 8.60893C9.11009 8.58082 9.1659 8.54027 9.21186 8.48978C9.26378 8.43272 9.298 8.35854 9.36643 8.21018L11.2738 4.07502Z" stroke="#AFAAA0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                    </span></div>
+                    <span>Публикация статьи</span>
+                </div>
+            </div>
+        </div>
+        <div class="base js-base" data-type="add" data-index-glossary = '0'>
+            <h1 class="js-main-title">Биография</h1>
+            <div class="navbar">
+                <div class="navbar__item js-modal-call-button">Инструкция ⧽ </div>
+                <div class="modal modal-manual js-modal-popup">
+                    <div class="modal-wrapper js-modal-wrapper">
+                        <div class="modal-cross js-modal-cross"></div>
+                        <div class="manual-title">Расскажите о своих героях</div>
+                        <div class="modal-content manual">
+                            <div class="manual-text">Цель настоящего портала — создание базы статей о лицах, являющихся ветеранами Великой Отечественной войны.</div>
+                            <div class="manual-text">Этот материал поможет вам создать статью о ветеране Великой Отечественной войны в РУВИКИ.</div>
+                            <div class="timeline">
+                                <div class="timeline__item is-current">
+                                    <div class="timeline__item-title">
+                                        <div><span>1</span></div>
+                                        <span class="js-info-lk">Авторизуйтесь в РУВИКИ</span>
+                                    </div>
+                                    <div class="timeline-list">
+                                        <div class="timeline-list__item js-button-reg">
+                                            <span><a href="https://ru.crw083.ru/lk/nashi-geroi" target="_blank">Регистрация</a></span>
+                                        </div>
+                                        <div class="timeline-list__item">
+                                            <span><a href="/" class="js-button-login">Войти</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline__item is-current">
+                                    <div class="timeline__item-title">
+                                        <div><span>2</span></div>
+                                        <span>Проверьте, не написана ли уже статья о вашем герое</span>
+                                    </div>
+                                    <div class="timeline-list">
+                                        <div class="timeline-list__item">
+                                            <span>Чтобы узнать, есть ли статья о вашем герое в энциклопедии РУВИКИ, введите его полное ФИО в <a href="/" target="_blank">строку поиска</a> на сайте и нажмите «Поиск». Если поиск не обнаружит статьи о вашем герое, вы можете начать писать её.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline__item is-current">
+                                    <div class="timeline__item-title">
+                                        <div><span>3</span></div>
+                                        <span>Чтоб начать писать о герое убедитесь, что вы собрали достаточно данных для написания статьи</span>
+                                    </div>
+                                    <div class="timeline-list">
+                                        <div class="timeline-list__item">
+                                            <ul>
+                                                <li>Ф.И.О человека, которому посвящена статья;</li>
+                                                <li>не менее 300 знаков текста;</li>
+                                                <li>не менее одного факта о герое: например, награда, место службы, участие в определённых боях, послевоенная биография;</li>
+                                                <li>подтверждающие источники — ими могут быть сканы документов, ссылки на опубликованные документы (в том числе на сайтах официальных агрегаторов информации о ветеранах Великой Отечественной войны), а также ссылки на оцифрованные публикации в периодической печати, где упомянута персона, или сканы таких публикаций.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline__item is-current">
+                                    <div class="timeline__item-title">
+                                        <div><span>4</span></div>
+                                        <span>При написании статьи пользуйтесь рекомендуемыми источниками:</span>
+                                    </div>
+                                    <div class="timeline-list">
+                                        <div class="timeline-list__item">
+                                            <span>Мы заботимся о качестве статей. Чтобы статья была включена в РУВИКИ, она должна быть корректно оформленной, а также проверяемой и энциклопедичной. Для этого в ваш текст следует добавить достаточное количество надёжных источников.</span>
+                                        </div>
+                                    </div>
+                                    <div class="manual-links">
+                                        <a href="https://podvignaroda.ru/" class="manual-links__item" target="_blank">Подвиг народа</a>
+                                        <a href="https://pamyat-naroda.ru/" class="manual-links__item" target="_blank">Память народа</a>
+                                        <a href="https://xn--b1aqfv.xn--p1ai/poleznaya-informaciya/obobshchennyy-bank-dannykh-memorial/" class="manual-links__item" target="_blank">Обобщённый банк данных «Мемориал»</a>
+                                        <a href="https://www.moypolk.ru/" class="manual-links__item" target="_blank">Бессмертный полк</a>
+                                        <a href="http://archives.gov.ru/" class="manual-links__item" target="_blank">Федеральное архивное агентство</a>
+                                        <a href="https://rusarchives.ru/" class="manual-links__item" target="_blank">Архивы России</a>
+                                        <a href="https://archive.mil.ru/" class="manual-links__item" target="_blank">Центральный архив Минобороны России</a>
+                                        <a href="https://rgvarchive.ru/" class="manual-links__item" target="_blank">Российский государственный военный архив</a>
+                                        <a href="https://rgavmf.ru/" class="manual-links__item" target="_blank">Российский государственный архив Военно-морского флота</a>
+                                        <a href="" class="manual-links__item" target="_blank">Победа — Федеральное архивное агентство</a>
+                                        <a href="http://www.archive.perm.ru/" class="manual-links__item" target="_blank">Пермский архив</a>
+                                        <a href="" class="manual-links__item" target="_blank">Центр документации Дрезден</a>
+                                    </div>
+                                </div>
+                                <div class="timeline__item is-current">
+                                    <div class="timeline__item-title">
+                                        <div>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M6.25814 16.5015C7.35938 17.1366 8.63711 17.5 9.9997 17.5C14.1418 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 11.3626 2.86337 12.6403 3.49849 13.7416L3.50095 13.7458C3.56207 13.8518 3.59288 13.9052 3.60684 13.9557C3.62001 14.0033 3.62368 14.0462 3.62031 14.0955C3.61669 14.1484 3.59884 14.2034 3.56224 14.3132L2.92155 16.2352L2.92074 16.2377C2.78557 16.6433 2.71798 16.846 2.76615 16.9811C2.80816 17.0989 2.9014 17.1919 3.01921 17.2339C3.15401 17.282 3.35587 17.2147 3.75962 17.0801L3.76465 17.0783L5.68671 16.4376C5.79614 16.4011 5.85178 16.3826 5.90466 16.379C5.95396 16.3756 5.99648 16.3801 6.04411 16.3932C6.09474 16.4072 6.1482 16.4381 6.2547 16.4995L6.25814 16.5015Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <span>В случае возникновения трудностей вы можете написать об этом в <a href="t.me/RUWIKI_COMP" target="_blank">чат авторов РУВИКИ</a>.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar__item js-modal-call-button">Вопросы и ответы ⧽</div>
+                <div class="modal modal-manual js-modal-popup">
+                    <div class="modal-wrapper faq-wrapper js-modal-wrapper">
+                        <div class="modal-cross js-modal-cross"></div>
+                        <div class="manual-title">Вопросы и ответы:</div>
+                        <div class="modal-content faq">
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>О ком я могу создать статью?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">Вы можете создать статью о любом родственнике или знакомом, являющемся ветераном Великой Отечественной войны.</div>
+                                <div class="faq__item-bottom"></div>
+                            </div>
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>Как правильно написать статью о ветеране?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">
+                                    <div>Мы рекомендуем ознакомиться с инструкцией, в которой рассказано, как заполнять анкету о ветеране. На основании этой анкеты с помощью нейросети будет сформирована статья, соответствующая требованиям к статьям в РУВИКИ.</div>
+                                    <div>Информация, которую нужно внести в анкету, должна включать три аспекта жизни ветерана: довоенный период, участие в Великой Отечественной войне и послевоенный период.</div>
+                                </div>
+                            </div>
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>Что делать, если у меня нет доступа к некоторым данным о жизни ветерана и его участии в Великой Отечественной войне? Можно ли всё равно написать статью?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">Да, вы можете внести ту информацию, которая у вас есть.</div>
+                            </div>
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>Есть ли какие-либо требования к стилю или объёму текста?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">
+                                    <div>Мы просим вас придерживаться литературного стиля изложения.</div>
+                                    <div>Не рекомендуется создавать статьи объёмом менее 300 символов с пробелами. Не ограничивайтесь чрезмерно кратким изложением фактов: чем более подробно вы опишете жизнь ветерана, тем интереснее будет статья. Однако максимальный объём сформированной статьи не может быть более 4000 символов с пробелами — это примерно полтора листа формата А4.</div>
+                                </div>
+                            </div>
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>Сколько времени занимает публикация статьи после нажатия кнопки «Опубликовать»?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">Статья публикуется сразу, но после этого она будет проверена нашими редакторами на соответствие тематике портала «Наши герои — наша история» на сайте РУВИКИ. В случае возникших вопросов вы получите сообщение в личном кабинете.</div>
+                            </div>
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>Как проверяется достоверность информации, которую я внёс?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">Чтобы избежать неточностей в изложении исторических данных, наши редакторы проверят их в вашей статье после её публикации. Если у них возникнут к вам вопросы, вы получите сообщение в личном кабинете.</div>
+                            </div>
+                            <div class="faq__item js-faq">
+                                <div class="faq__item-title">
+                                    <span></span>
+                                    <div>Можно ли редактировать уже опубликованную статью? Если да, то как это сделать?</div>
+                                </div>
+                                <div class="faq__item-text js-faq-text">После того как статья будет опубликована, вы можете её править. Для этого зайдите на страницу статьи и нажмите кнопку «Править», которая находится вверху страницы над заголовком статьи. Также кнопку «Править» можно найти рядом с началом каждого раздела статьи — в этих случаях она выглядит как значок в виде карандаша.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="base-wrapper" data-stete="1" name="formHero">
+                <div class="form__item js-state1 active">
+                    <div class="form-block js-block a1" data-fill="false" data-complete="false">
+                        <div class="form-title">Личные данные</div>
+                        <div class="form-suggest">
+                            <span>В поле «Личные данные» необходимо указать актуальные сведения. <span>Поля обязательны для заполнения</span><span>*</span></span>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-info">
+                                <div class="form-for-input">
+                                    <div class="form-for-input__title">Фамилия<span>*</span></div>
+                                    <input class="form-for-input__input js-required js-permission-alphabet" type="text" value="" name="lastName" maxlength="25" placeholder="Фамилия" required/>
+                                </div>
+                                <div class="form-for-input">
+                                    <div class="form-for-input__title">Имя<span>*</span></div>
+                                    <input class="form-for-input__input js-required js-permission-alphabet" type="text" value="" name="firstName" maxlength="20" placeholder="Имя" required/>
+                                </div>
+                                <div class="form-for-input">
+                                    <div class="form-for-input__title">Отчество<span>*</span></div>
+                                    <input class="form-for-input__input js-required js-permission-alphabet" type="text" value="" name="middleName" maxlength="25" placeholder="Отчество" required/>
+                                </div>
+                                <div class="form-for-input is-small-width">
+                                    <div class="form-for-input__title">Дата рождения<span>*</span></div>
+                                    <div class="form-for-input-wrapper">
+                                        <input class="form-for-input__input is-input-number form-date js-date js-required" name="birthDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата"/>
+                                        <div class="form-for-input__input form-month">
+                                            <div class="form-list-data js-modal-call-button-list">
+                                                <input type="hidden" name="birthMonth" class="js-value-list-hidden">
+                                                <input class="js-value-list js-month js-required" type="text" placeholder="Месяц" value="" readonly>
+                                                <span></span>
+                                            </div>
+                                            <div class="form-list js-modal-popup-list">
+                                                <ul class="form-list-wrapper js-modal-wrapper-list">
+                                                    <li class="sidebar-links-popup-cross js-modal-cross-list is-hidden"></li>
+                                                    <li class="form-list__item">
+                                                        <label class="">Январь</label>
+                                                        <input class="js-list" type="radio" name="month" value="01"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Февраль</label>
+                                                        <input class="js-list" type="radio" name="month" value="02"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Март</label>
+                                                        <input class="js-list" type="radio" name="month" value="03"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Апрель</label>
+                                                        <input class="js-list" type="radio" name="month" value="04"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Май</label>
+                                                        <input class="js-list" type="radio" name="month" value="05"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Июнь</label>
+                                                        <input class="js-list" type="radio" name="month" value="06"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Июль</label>
+                                                        <input class="js-list" type="radio" name="month" value="07"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Август</label>
+                                                        <input class="js-list" type="radio" name="month" value="08"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Сентябрь</label>
+                                                        <input class="js-list" type="radio" name="month" value="09"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Октябрь</label>
+                                                        <input class="js-list" type="radio" name="month" value="10"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Ноябрь</label>
+                                                        <input class="js-list" type="radio" name="month" value="11"/>
+                                                    </li>
+                                                    <li class="form-list__item">
+                                                        <label>Декабрь</label>
+                                                        <input class="js-list" type="radio" name="month" value="12"/>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input class="form-for-input__input is-input-number form-year js-year js-required" name="birthYear" type="number" min="1820" max="1939" placeholder="Год" required/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-upload form-img js-for-input-file">
+                                <div class="form-upload-wrapper">
+                                    <div class="form-upload-info">
+                                        <div class="form-upload-info__img">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
+                                                <path d="M21.834 28.3327L32.5007 17.666M32.5007 17.666L43.1673 28.3327M32.5007 17.666V49.666" stroke="#AFAAA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="form-upload-info__title">Добавить фото</div>
+                                        <div class="form-upload-info__addition">или <span>выберите файл</span></div>
+                                        <div class="form-upload-info__text">
+                                            <div class="js-file-type">Поддерживаемые файлы: JPG PNG GIF</div>
+                                            <div class="js-file-size">Максимальный размер файла 5 мб</div>
+                                        </div>
+                                        <input class="form-upload-input js-input-file" name="photos1" type="file" value="" />
+                                        <div class="form-upload-info__place-img js-place-img">
+                                            <img src="" alt="" class="js-view"/>
+                                            <button type="button" class="form-upload-info__remove js-del-img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M6 6V17.8C6 18.9201 6 19.4798 6.21799 19.9076C6.40973 20.2839 6.71547 20.5905 7.0918 20.7822C7.5192 21 8.07899 21 9.19691 21H14.8031C15.921 21 16.48 21 16.9074 20.7822C17.2837 20.5905 17.5905 20.2839 17.7822 19.9076C18 19.4802 18 18.921 18 17.8031V6M6 6H8M6 6H4M8 6H16M8 6C8 5.06812 8 4.60241 8.15224 4.23486C8.35523 3.74481 8.74432 3.35523 9.23438 3.15224C9.60192 3 10.0681 3 11 3H13C13.9319 3 14.3978 3 14.7654 3.15224C15.2554 3.35523 15.6447 3.74481 15.8477 4.23486C15.9999 4.6024 16 5.06812 16 6M16 6H18M18 6H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                Удалить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal modal-form js-modal-file">
+                                    <div class="modal-wrapper js-modal-wrapper-file">
+                                        <div class="modal-cross js-modal-file-cross"></div>
+                                        <div class="modal-content js-modal-file-content">
+                                            <div class="modal-title js-modal-title-file">Загрузить фото</div>
+                                            <div class="form-upload-data">
+                                                <div class="form-upload-for-img js-for-img">
+                                                    <img src="" alt="" class="js-file-load"/>
+                                                </div>
+                                                <label class="form-upload-checkbox js-upload-for-checkbox">
+                                                    <input class="js-upload-checkbox" type="checkbox" name="myPhoto"/>
+                                                    <span></span>
+                                                    собственная работа/личный архив
+                                                </label>
+                                                <div class="form-upload-text js-class-upload-text">
+                                                    Я подтверждаю, что загружаю этот файл в соответствии с <a href="#" target="_blank">Условиями использования</a> и <a href="#">Политикой конфиденциальности</a> сайта РУВИКИ.
+                                                </div>
+                                                <button type="button" class="form-upload-button disabled js-button-upload" disabled>Загрузить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="opacity-layer js-modal-layer-file"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-for-input is-no-flex">
+                            <div class="form-for-input__title">Место рождения<span>*</span></div>
+                            <input class="form-for-input__input js-required js-permission-alphabetSmall" type="text" value="" name="birthPlace" placeholder="Населенный пункт" maxlength="40" required/>
+                        </div>
+                    </div>
+                    <div class="form-block js-block js-has-link1" data-fill="false" data-complete="false">
+                        <div class="form-subtitle">Ранние годы и образование</div>
+                        <div class="form-suggest">
+                            <span>Напишите о жизни участника: образовании, семейном положении, а также о начале военной службы до начала Великой Отечественной войны. <a href="https://ru.ruwiki.ru/wiki/Королёв,_Иван_Фёдорович_(подполковник)" target="_blank">Пример</a>.</span>
+                        </div>
+                        <div class="form-for-input is-textarea">
+                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig txt1" placeholder="Текст" maxlength="1000" value="" name="earlyYears"></textarea>
+                            <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
+                        </div>
+                        <div class="form-suggest">
+                            <span>Предоставляя читателям вашей статьи ссылки на источники, вы позволяете им более глубоко изучить историю ветерана. <button type="button" class="js-call-links">Список рекомендуемых источников</button>.</span>
+                        </div>
+                        <div class="form-links js-form-links lin1"></div>
+                        <button type="button" class="form-button-links js-modal-call-button-add-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9.1718 14.8293L14.8287 9.17241M7.05086 11.2935L5.63664 12.7077C4.07455 14.2698 4.07409 16.8027 5.63619 18.3648C7.19829 19.9269 9.7317 19.9264 11.2938 18.3643L12.7065 16.9502M11.2929 7.05049L12.7071 5.63628C14.2692 4.07418 16.8016 4.07446 18.3637 5.63656C19.9258 7.19865 19.9257 9.73134 18.3636 11.2934L16.9501 12.7076" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Добавить ссылки на источники
+                        </button>
+                        <div class="form-button-links-suggest">Не более 5 ссылок</div>
+                        <div class="modal js-modal-popup-add-links">
+                            <div class="modal-wrapper js-modal-wrapper-add-links">
+                                <div class="modal-cross js-modal-cross-list"></div>
+                                <div class="modal-content">
+                                    <div class="modal-title">Ссылка на источник</div>
+                                    <input class="form-for-input__input js-input-url in1" type="url" placeholder="Например, https://example.org"/>
+                                    <div class="form-buttons">
+                                        <button type="button" class="form-buttons__next disabled js-button-add-link" disabled>Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal js-popup-edit-links">
+                            <div class="modal-wrapper js-wrapper-edit-links">
+                                <div class="modal-cross js-cross-links"></div>
+                                <div class="modal-content">
+                                    <div class="modal-title">Ссылка на источник</div>
+                                    <input class="form-for-input__input js-edit-url" type="url" placeholder="Например, https://example.org"/>
+                                    <div class="form-buttons">
+                                        <div class="form-buttons__next js-change-link but1">Изменить</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__item js-state2">
+                    <div class="form-block js-block b1">
+                        <div class="form-title">Призыв</div>
+                        <div class="form-suggest">
+                            <span>Укажите место призыва, дату (если известно), звание и подразделение.</span>
+                        </div>
+                        <div class="form-for-input">
+                            <div class="form-for-input__title">Место призыва</div>
+                            <input class="form-for-input__input js-maybe-complete1 js-permission-alphabetSmall" placeholder="Населенный пункт" type="text" value="" name="recruitPlace" maxlength="40"/>
+                        </div>
+                        <div class="form-for-input is-half-width is-small-width">
+                            <div class="form-for-input__title">Дата призыва</div>
+                            <div class="form-for-input-wrapper">
+                                <input class="form-for-input__input is-input-number form-date js-date js-for-date d1" name="recruitDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
+                                <div class="form-for-input__input form-month">
+                                    <div class="form-list-data js-modal-call-button-list js-button-date">
+                                        <input type="hidden" name="recruitMonth" class="js-value-list-hidden js-maybe-complete2" value="">
+                                        <input class="js-value-list js-month js-for-month m1" type="text" placeholder="Месяц" value="" readonly>
+                                        <span></span>
+                                    </div>
+                                    <div class="form-list js-modal-popup-list">
+                                        <ul class="form-list-wrapper js-modal-wrapper-list">
+                                            <li class="sidebar-links-popup-cross js-modal-cross-list is-hidden"></li>
+                                            <li class="form-list__item">
+                                                <label class="">Январь</label>
+                                                <input class="js-list" type="radio" name="month" value="01"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Февраль</label>
+                                                <input class="js-list" type="radio" name="month" value="02"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Март</label>
+                                                <input class="js-list" type="radio" name="month" value="03"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Апрель</label>
+                                                <input class="js-list" type="radio" name="month" value="04"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Май</label>
+                                                <input class="js-list" type="radio" name="month" value="05"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Июнь</label>
+                                                <input class="js-list" type="radio" name="month" value="06"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Июль</label>
+                                                <input class="js-list" type="radio" name="month" value="07"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Август</label>
+                                                <input class="js-list" type="radio" name="month" value="08"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Сентябрь</label>
+                                                <input class="js-list" type="radio" name="month" value="09"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Октябрь</label>
+                                                <input class="js-list" type="radio" name="month" value="10"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Ноябрь</label>
+                                                <input class="js-list" type="radio" name="month" value="11"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Декабрь</label>
+                                                <input class="js-list" type="radio" name="month" value="12"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <input class="form-for-input__input is-input-number form-year js-year js-year-call js-for-year y1" name="recruitYear" type="number" min="1900" max="1945" placeholder="Год"/>
+                            </div>
+                        </div>
+                        <div class="form-for-input">
+                            <div class="form-for-input__title">Звание</div>
+                            <div class="form-for-input-wrapper">
+                                <div class="form-for-input__input">
+                                    <input type="hidden" class="is-hidden js-date d3"/>
+                                    <div class="form-list-data js-modal-call-button-list js-create-list">
+                                        <input type="hidden" name="rank" class="js-value-list-hidden js-rank-value-list-hidden" value="">
+                                        <input class="js-value-list js-month js-rank-list-value" type="text" placeholder="Укажите звание ветерана на момент окончания службы" value="" readonly>
+                                        <span></span>
+                                    </div>
+                                    <div class="form-list js-modal-popup-list is-rank">
+                                        <div class="form-list-wrapper js-modal-wrapper-list ">
+                                            <div class="sidebar-links-popup-cross js-modal-cross-list is-hidden"></div>
+                                            <div class="form-list-content js-rank-list"></div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" class="is-hidden js-year d3"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-for-input">
+                            <div class="form-for-input__title">Подразделение</div>
+                            <input class="form-for-input__input js-permission-alphabetMiddle" placeholder="Укажите название подразделения или воинской части" type="text" value="" name="subdivision" maxlength="50" required/>
+                        </div>
+                    </div>
+                    <div class="form-block js-block b2 js-has-battle">
+                        <div class="form-subtitle">Краткое описание участия в боевых действиях<span>*</span></div>
+                        <div class="form-suggest">
+                            <span>Опишите участие в боевых действиях, сражениях или значимых событиях. Укажите любые награды и отличия, полученные за службу.</span>
+                        </div>
+                        <div class="form-for-input is-textarea">
+                            <textarea class="form-for-input__input js-textarea js-required js-permission-alphabetBig txt2" placeholder="Текст" maxlength="1000" value="" name="militaryOperations" required></textarea>
+                            <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
+                        </div>
+                        <div class="form-links js-form-choose is-chosen ch1"></div>
+                        <div class="form-button-links js-modal-call-button-add-choose is-battle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16.1078 17.8307L3.6158 7.06171L3.6158 3.61564L7.06187 3.61564L17.8308 16.1076M14.3848 19.5537L16.9693 16.9692M19.5539 14.3846L16.9693 16.9692M16.9693 16.9692L20.4154 20.4152" stroke="#2A2823" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="20.846" cy="20.8457" r="0.718315" transform="rotate(-45 20.846 20.8457)" stroke="#2A2823"/>
+                                <path d="M6.20154 16.1078L7.54766 14.5463L8.22073 13.7656M7.92458 17.8308L9.48608 16.4847L10.2668 15.8117M4.47851 14.3848L7.06306 16.9693M9.64761 19.5539L7.06306 16.9693M7.06306 16.9693L3.61699 20.4154M13.8247 7.1231L14.2783 6.7388L16.9705 3.6158L20.4166 3.6158L20.4166 7.06187L17.2936 9.75412L16.2615 10.7782" stroke="#2A2823" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="3.18555" cy="20.8465" r="0.718315" transform="rotate(45 3.18555 20.8465)" stroke="#2A2823"/>
+                            </svg>
+                            Добавить сражения
+                        </div>
+                        <div class="modal modal-choose js-modal-popup-choose">
+                            <div class="modal-wrapper js-modal-wrapper-choose is-battle">
+                                <div class="modal-cross js-modal-cross-list"></div>
+                                <div class="modal-title">Сражения</div>
+                                <div class="search">
+                                    <input type="text" class="form-for-input__input js-search-choose" value="" placeholder="Найти сражение"/>
+                                </div>
+                                <div class="modal-content">
+                                    <div class="js-choose-list"></div>
+                                </div>
+                                <div class="form-buttons">
+                                    <button type="button" class="form-buttons__next disabled js-button-add-choose" disabled>Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-suggest">
+                            <span>Предоставляя читателям вашей статьи ссылки на источники, вы позволяете им более глубоко изучить историю ветерана. <button type="button" class="js-call-links">Список рекомендуемых источников</button>.</span>
+                        </div>
+                        <div class="form-links js-form-links"></div>
+                        <button type="button" class="form-button-links js-modal-call-button-add-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9.1718 14.8293L14.8287 9.17241M7.05086 11.2935L5.63664 12.7077C4.07455 14.2698 4.07409 16.8027 5.63619 18.3648C7.19829 19.9269 9.7317 19.9264 11.2938 18.3643L12.7065 16.9502M11.2929 7.05049L12.7071 5.63628C14.2692 4.07418 16.8016 4.07446 18.3637 5.63656C19.9258 7.19865 19.9257 9.73134 18.3636 11.2934L16.9501 12.7076" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Добавить ссылки на источники
+                        </button>
+                        <div class="modal js-modal-popup-add-links">
+                            <div class="modal-wrapper js-modal-wrapper-add-links">
+                                <div class="modal-cross js-modal-cross-list"></div>
+                                <div class="modal-content">
+                                    <div class="modal-title">Ссылка на источник</div>
+                                    <input class="form-for-input__input js-input-url in1" type="url" placeholder="Например, https://example.org"/>
+                                    <div class="form-buttons">
+                                        <button type="button" class="form-buttons__next disabled js-button-add-link" disabled>Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal js-popup-edit-links">
+                            <div class="modal-wrapper js-wrapper-edit-links">
+                                <div class="modal-cross js-cross-links"></div>
+                                <div class="modal-content">
+                                    <div class="modal-title">Ссылка на источник</div>
+                                    <input class="form-for-input__input js-edit-url" type="url" placeholder="Например, https://example.org"/>
+                                    <div class="form-buttons">
+                                        <div class="form-buttons__next js-change-link but2">Изменить</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block js-block b3">
+                        <div class="form-subtitle">Завершение боевого пути</div>
+                        <div class="form-radio">
+                            <input type="hidden" name="endCombatPathStatus" class="js-radio-value"/>
+                            <label class="form-radio__item">
+                                <input type="radio" name="endCombat" value="" class="js-radio-button"/>
+                                <span class="form-radio__item-radio"></span>
+                                <div class="form-radio__item-text js-radio-button-value">Прошёл всю войну</div>
+                            </label>
+                            <label class="form-radio__item">
+                                <input type="radio" name="endCombat" value="" class="js-radio-button"/>
+                                <span class="form-radio__item-radio"></span>
+                                <div class="form-radio__item-text js-radio-button-value">Погиб</div>
+                            </label>
+                            <label class="form-radio__item">
+                                <input type="radio" name="endCombat" value="" class="js-radio-button"/>
+                                <span class="form-radio__item-radio"></span>
+                                <div class="form-radio__item-text js-radio-button-value">Пропал без вести</div>
+                            </label>
+                        </div>
+                        <div class="form-radio-chose">
+                            <div class="form-suggest js-suggest-info">
+                                <span>Укажите страну, регион или населенный пункт, где ветеран закончил свой боевой путь.</span>
+                            </div>
+                            <div class="form-for-input">
+                                <input class="form-for-input__input js-permission-alphabetBig" type="text" value="" name="endCombatPathLocation" placeholder="Населенный пункт" maxlength="45" required="">
+                            </div>
+                            <div class="form-for-input is-half-width is-small-width">
+                                <div class="form-for-input__title">Дата</div>
+                                <div class="form-for-input__subtitle">
+                                    Укажите дату завершения боевого пути
+                                </div>
+                                <div class="form-for-input-wrapper">
+                                    <input class="form-for-input__input is-input-number form-date js-date js-for-date d2" name="endCombatDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
+                                    <div class="form-for-input__input form-month">
+                                        <div class="form-list-data js-modal-call-button-list js-button-date">
+                                            <input type="hidden" name="endCombatMonth" class="js-value-list-hidden js-maybe-complete2" value="">
+                                            <input class="js-value-list js-month js-for-month m2" type="text" placeholder="Месяц" value="" readonly>
+                                            <span></span>
+                                        </div>
+                                        <div class="form-list js-modal-popup-list is-top-position">
+                                            <ul class="form-list-wrapper js-modal-wrapper-list">
+                                                <li class="sidebar-links-popup-cross js-modal-cross-list is-hidden"></li>
+                                                <li class="form-list__item">
+                                                    <label class="">Январь</label>
+                                                    <input class="js-list" type="radio" name="month" value="01"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Февраль</label>
+                                                    <input class="js-list" type="radio" name="month" value="02"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Март</label>
+                                                    <input class="js-list" type="radio" name="month" value="03"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Апрель</label>
+                                                    <input class="js-list" type="radio" name="month" value="04"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Май</label>
+                                                    <input class="js-list" type="radio" name="month" value="05"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Июнь</label>
+                                                    <input class="js-list" type="radio" name="month" value="06"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Июль</label>
+                                                    <input class="js-list" type="radio" name="month" value="07"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Август</label>
+                                                    <input class="js-list" type="radio" name="month" value="08"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Сентябрь</label>
+                                                    <input class="js-list" type="radio" name="month" value="09"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Октябрь</label>
+                                                    <input class="js-list" type="radio" name="month" value="10"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Ноябрь</label>
+                                                    <input class="js-list" type="radio" name="month" value="11"/>
+                                                </li>
+                                                <li class="form-list__item">
+                                                    <label>Декабрь</label>
+                                                    <input class="js-list" type="radio" name="month" value="12"/>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input class="form-for-input__input is-input-number form-year js-year js-year-endCombat js-for-year y2" name="endCombatYear" required type="number" min="1900" max="1945" placeholder="Год"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block js-block b4 js-has-awards">
+                        <div class="form-subtitle">Награды</div>
+                        <div class="form-suggest">
+                            <span>Выберете из списка награды, полученные ветераном. Если в списке не оказалось необходимой награды, Вы можете рассказать о ней в поле "Краткое описание участия в боевых действиях"</span>
+                        </div>
+                        <div class="form-links js-form-choose is-chosen ch2"></div>
+                        <div class="form-button-links js-modal-call-button-add-choose">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M11.2738 4.07502C11.505 3.57368 11.6207 3.32301 11.7803 3.24482C11.9191 3.17686 12.0814 3.17686 12.2202 3.24482C12.3798 3.32301 12.4954 3.57368 12.7267 4.07502L14.634 8.21018C14.7025 8.35854 14.7367 8.43272 14.7886 8.48978C14.8346 8.54027 14.8904 8.58082 14.9526 8.60893C15.0229 8.64068 15.1041 8.6503 15.2663 8.66954L19.7885 9.20571C20.3367 9.27072 20.6109 9.30322 20.7346 9.43089C20.8421 9.54184 20.8922 9.69627 20.8705 9.84922C20.8455 10.0252 20.6428 10.2126 20.2374 10.5875L16.8941 13.6793C16.7741 13.7903 16.7142 13.8457 16.6759 13.9127C16.6421 13.9721 16.6208 14.0377 16.6133 14.1055C16.6048 14.1822 16.6207 14.2623 16.6526 14.4226L17.5401 18.8891C17.6477 19.4306 17.7015 19.7014 17.6183 19.8585C17.546 19.995 17.4146 20.0905 17.2624 20.117C17.0873 20.1476 16.8464 20.0128 16.3647 19.7431L12.391 17.5188C12.2484 17.439 12.1771 17.3991 12.1016 17.3835C12.0347 17.3696 11.9657 17.3696 11.8989 17.3835C11.8233 17.3991 11.7521 17.439 11.6095 17.5188L7.63582 19.7431C7.15405 20.0128 6.91317 20.1476 6.73805 20.117C6.58586 20.0905 6.4545 19.995 6.3822 19.8585C6.299 19.7014 6.3528 19.4306 6.4604 18.8891L7.3479 14.4226C7.37974 14.2623 7.39566 14.1822 7.38719 14.1055C7.37969 14.0377 7.35837 13.9721 7.32455 13.9127C7.28633 13.8457 7.22635 13.7903 7.1064 13.6793L3.76304 10.5875C3.35769 10.2126 3.15502 10.0252 3.12999 9.84922C3.10823 9.69627 3.15841 9.54184 3.26591 9.43089C3.38961 9.30322 3.66374 9.27072 4.21201 9.20571L8.73418 8.66954C8.89643 8.6503 8.97755 8.64068 9.04786 8.60893C9.11009 8.58082 9.1659 8.54027 9.21186 8.48978C9.26378 8.43272 9.298 8.35854 9.36643 8.21018L11.2738 4.07502Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Выбрать награды из списка
+                        </div>
+                        <div class="modal modal-choose js-modal-popup-choose">
+                            <div class="modal-wrapper is-awards js-modal-wrapper-choose">
+                                <div class="modal-cross js-modal-cross-list"></div>
+                                <div class="modal-title">Награды</div>
+                                <div class="search">
+                                    <input type="text" class="form-for-input__input js-search-choose" value="" placeholder="Найти награду"/>
+                                </div>
+                                <div class="modal-content">
+                                    <div class="js-choose-list"></div>
+                                </div>
+                                <div class="form-buttons">
+                                    <button type="button" class="form-buttons__next disabled js-button-add-choose" disabled>Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__item js-state3">
+                    <div class="form-block js-block c1" data-complete="false">
+                        <div class="form-title">Ключевые моменты жизни</div>
+                        <div class="form-suggest">
+                            <span>Расскажите о ключевых моментах, которые произошли после того, как ветеран завершил военную службу. Включите в свой рассказ возвращение к гражданской жизни, поиск работы и профессиональное развитие.</span>
+                        </div>
+                        <div class="form-for-input is-textarea">
+                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig txt2" placeholder="Текст" maxlength="1000" value="" name="lifePostWarPeriod" required></textarea>
+                            <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
+                        </div>
+                    </div>
+                    <div class="form-block js-block c2" data-complete="false">
+                        <div class="form-title">Семья</div>
+                        <div class="form-suggest">
+                            <span>Укажите семейное положение дети если уместно, укажите количество детей и их возрасты. Опишите увлечения и интересы ветерана, такие как спорт, искусство, хобби и т.д.</span>
+                        </div>
+                        <div class="form-for-input is-textarea">
+                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig txt2" placeholder="Текст" maxlength="1000" value="" name="family" required></textarea>
+                            <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
+                        </div>
+                    </div>
+                    <div class="form-block js-block c3" data-complete="false">
+                        <div class="form-title">Окончание жизни</div>
+                        <div class="form-suggest">
+                            <span>Укажите дату смерти и место погребения если ветеран умер.</span>
+                        </div>
+                        <div class="form-for-input is-half-width is-small-width">
+                            <div class="form-for-input__title">Дата</div>
+                            <div class="form-for-input-wrapper">
+                                <input class="form-for-input__input is-input-number form-date js-date js-date-endLife js-for-date d3" name="endDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
+                                <div class="form-for-input__input form-month">
+                                    <div class="form-list-data js-modal-call-button-list js-button-date">
+                                        <input type="hidden" name="endMonth" class="js-value-list-hidden" value="">
+                                        <input class="js-value-list js-month js-for-month js-month-endLife m4" type="text" placeholder="Месяц" value="" readonly>
+                                        <span></span>
+                                    </div>
+                                    <div class="form-list js-modal-popup-list is-top-position">
+                                        <ul class="form-list-wrapper js-modal-wrapper-list">
+                                            <li class="sidebar-links-popup-cross js-modal-cross-list is-hidden"></li>
+                                            <li class="form-list__item">
+                                                <label class="">Январь</label>
+                                                <input class="js-list" type="radio" name="month" value="01"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Февраль</label>
+                                                <input class="js-list" type="radio" name="month" value="02"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Март</label>
+                                                <input class="js-list" type="radio" name="month" value="03"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Апрель</label>
+                                                <input class="js-list" type="radio" name="month" value="04"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Май</label>
+                                                <input class="js-list" type="radio" name="month" value="05"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Июнь</label>
+                                                <input class="js-list" type="radio" name="month" value="06"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Июль</label>
+                                                <input class="js-list" type="radio" name="month" value="07"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Август</label>
+                                                <input class="js-list" type="radio" name="month" value="08"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Сентябрь</label>
+                                                <input class="js-list" type="radio" name="month" value="09"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Октябрь</label>
+                                                <input class="js-list" type="radio" name="month" value="10"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Ноябрь</label>
+                                                <input class="js-list" type="radio" name="month" value="11"/>
+                                            </li>
+                                            <li class="form-list__item">
+                                                <label>Декабрь</label>
+                                                <input class="js-list" type="radio" name="month" value="12"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <input class="form-for-input__input is-input-number form-year js-year js-for-year js-year-endLife y4" name="endYear" type="number" min="1941" max="2025" placeholder="Год"/>
+                            </div>
+                        </div>
+                        <div class="form-for-input">
+                            <div class="form-for-input__title">Место погребения</div>
+                            <input class="form-for-input__input js-input js-permission-alphabetMiddle" placeholder="Укажите место погребение" type="text" value="" name="afterPlaceDeath" maxlength="50" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="form-buttons__back is-hidden js-prev">Назад</button>
+                    <button type="button" class="form-buttons__next disabled js-next" disabled>Боевой путь</button>
+                    <button type="button" class="form-buttons__next disabled js-publish is-hidden js-modal-call-button-final" disabled>Опубликовать</button>
+                    <div class="modal modal-final modal-auth js-modal-popup-final">
+                        <div class="modal-cross modal-auth-cross js-modal-cross-auth js-cross-auth"></div>
+                        <a class="modal-auth-logo" href="https://ru.ruwiki.ru" target="_blank"><img src="images/logo1.svg"></a>
+                        <div class="modal-wrapper js-modal-wrapper-final">
+                            <div class="modal-content">
+                                <div class="modal-img">
+                                    <img src="images/img1.png" alt=""/>
+                                </div>
+                                <div class="modal-title">Наши герои <br>— наша история!</div>
+                                <div class="modal-text">Благодарим вас за содействие в восстановлении исторической хроники.</div>
+                                <div class="modal-info">Ваша статья опубликована. Также её можно найти в Вашем личном кабинете в  разделе «Мастерская» - «Мои статьи».</div>
+                                <div class="modal-for-button">
+                                    <a href="/" target="_blank" class="modal-button js-goto-lk">Перейти в личный кабинет</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<div class="modal modal-list-of-links js-modal-list-of-links">
+    <div class="modal-wrapper js-wrapper-list-of-links">
+        <div class="modal-cross js-cross-list-of-links"></div>
+        <div class="modal-content">
+            <div class="modal-title">Список рекомендуемых источников</div>
+            <div class="manual-links">
+                <a href="https://podvignaroda.ru/" class="manual-links__item" target="_blank">Подвиг народа</a>
+                <a href="https://pamyat-naroda.ru/" class="manual-links__item" target="_blank">Память народа</a>
+                <a href="https://xn--b1aqfv.xn--p1ai/poleznaya-informaciya/obobshchennyy-bank-dannykh-memorial/" class="manual-links__item" target="_blank">Обобщённый банк данных «Мемориал»</a>
+                <a href="https://www.moypolk.ru/" class="manual-links__item" target="_blank">Бессмертный полк</a>
+                <a href="http://archives.gov.ru/" class="manual-links__item" target="_blank">Федеральное архивное агентство</a>
+                <a href="https://rusarchives.ru/" class="manual-links__item" target="_blank">Архивы России</a>
+                <a href="https://archive.mil.ru/" class="manual-links__item" target="_blank">Центральный архив Минобороны России</a>
+                <a href="https://rgvarchive.ru/" class="manual-links__item" target="_blank">Российский государственный военный архив</a>
+                <a href="https://rgavmf.ru/" class="manual-links__item" target="_blank">Российский государственный архив Военно-морского флота</a>
+                <a href="" class="manual-links__item" target="_blank">Победа — Федеральное архивное агентство</a>
+                <a href="http://www.archive.perm.ru/" class="manual-links__item" target="_blank">Пермский архив</a>
+                <a href="" class="manual-links__item" target="_blank">Центр документации Дрезден</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

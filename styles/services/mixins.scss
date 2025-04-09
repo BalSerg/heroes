@@ -1,0 +1,326 @@
+@import "../fonts/font";
+
+html {
+  --fontRegular: onestRegular, sans-serif;
+  --fontMedium: onestMedium, sans-serif;
+  --fontSemibold: onestSemibold, sans-serif;
+  --fontBold: onestBold, sans-serif;
+  --fontRegularLora: loraRegular, serif;
+  --fontMediumLora: loraMedium, serif;
+}
+
+html.family-serif {
+  --fontRegular: loraRegular, serif;
+  --fontMedium: loraMedium, serif;
+  --fontSemibold: loraSemibold, serif;
+  --fontBold: loraBold, serif;
+}
+
+@mixin font-regular-lora($font-size, $line-height) {
+  font-family: var(--fontMediumLora);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-regular($font-size, $line-height) {
+  font-family: var(--fontRegular);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-medium($font-size, $line-height) {
+  font-family: var(--fontMedium);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-semibold($font-size, $line-height) {
+  font-family: var(--fontSemibold);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-bold($font-size, $line-height) {
+  font-family: var(--fontBold);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font32(){
+  @include font-regular(2rem, 3rem);
+}
+
+@mixin font20(){
+  @include font-regular(1.25rem, 1.75rem);
+}
+
+@mixin font18(){
+  @include font-regular(1.125rem, 1.6875rem);
+}
+
+@mixin font16(){
+  @include font-regular(1rem, 1.5rem);
+}
+
+@mixin font14(){
+  @include font-regular(0.875rem, 1.25rem);
+}
+
+@mixin font12(){
+  @include font-regular(0.75rem, 1.125rem);
+}
+
+@mixin font10(){
+  @include font-regular(0.625rem, 0.75rem);
+}
+
+@mixin font48-medium() {
+  @include font-medium(3rem, 3.5rem);
+}
+
+@mixin font42-medium() {
+  @include font-medium(2.625rem, 2.25rem);
+}
+
+@mixin font18-medium() {
+  @include font-medium(1.125rem, 1.75rem);
+}
+
+@mixin font16-medium() {
+  @include font-medium(1rem, 1.5rem);
+}
+
+@mixin font14-medium() {
+  @include font-medium(0.875rem, 1.25rem);
+}
+
+@mixin font12-medium() {
+  @include font-medium(0.75rem, 1.125rem);
+}
+
+
+@mixin font16-semibold(){
+  @include font-semibold(1rem, 1.5rem);
+}
+@mixin font32-semibold(){
+  @include font-semibold(2rem, 2.625rem);
+}
+@mixin font24-semibold(){
+  @include font-semibold(1.5rem, 1.875rem);
+}
+@mixin font20-semibold(){
+  @include font-semibold(1.25rem, 1.75rem);
+}
+@mixin font14-semibold(){
+  @include font-semibold(0.875rem, 1.25rem);
+}
+
+
+@mixin font48-bold(){
+  @include font-bold(3rem, 3.5rem);
+}
+
+@mixin font42-bold(){
+  @include font-bold(2.625rem, 2.25rem);
+}
+
+@mixin font40-bold(){
+  @include font-bold(2.5rem, 3.5rem);
+}
+
+@mixin font32-bold(){
+  @include font-bold(2rem, 2.625rem);
+}
+
+@mixin font24-bold(){
+  @include font-bold(1.5rem, 1.875rem);
+}
+
+@mixin font20-bold(){
+  @include font-bold(1.25rem, 1.75rem);
+}
+
+@mixin font18-bold(){
+  @include font-bold(1.125rem, 1.6875rem);
+}
+
+@mixin font16-bold(){
+  @include font-bold(1rem, 1.5rem);
+}
+
+@mixin font14-bold(){
+  @include font-bold(0.875rem, 1.25rem);
+}
+
+@mixin font12-bold(){
+  @include font-bold(0.75rem, 1.125rem);
+}
+
+@mixin font9-bold(){
+  @include font-bold(0.5625rem, 1.125rem);
+}
+
+@mixin font62-Lora-semibold() {
+  @include font-regular-lora(3.875rem, 4.625rem);
+}
+
+@mixin font48-Lora-semibold() {
+  @include font-regular-lora(3rem, 3.5rem);
+}
+
+@mixin font32-Lora-semibold() {
+  @include font-regular-lora(2rem, 2.6rem);
+}
+
+@mixin font29-Lora-semibold() {
+  @include font-regular-lora(1.8125rem, 2.125rem);
+}
+
+@mixin font20-Lora-semibold() {
+  @include font-regular-lora(1.25rem, 2.625rem);
+}
+
+@mixin font16-Lora-semibold() {
+  @include font-regular-lora(1rem, 1.5rem);
+}
+
+@mixin mobile {
+  @media screen and (max-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $width-laptop) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media screen and (max-width: $width-desktop-wide) {
+    @content;
+  }
+}
+
+@mixin medium-desktop {
+  @media screen and (max-width: $width-desktop) {
+    @content;
+  }
+}
+
+@mixin opacity-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+}
+
+@mixin button-bordered($color, $color-hover, $border-color, $radius) {
+  padding: 12px $Spacing-3;
+  display: flex;
+  gap: 0 $Spacing-2;
+
+  color: $color;
+
+  border: 2px solid $border-color;
+  background: $sepia;
+  border-radius: $radius;
+
+  transition: $transition-out;
+  cursor: pointer;
+
+  path,
+  circle {
+    stroke: $color;
+  }
+
+  &:hover {
+    color: $color-hover;
+
+    border: 2px solid $color-hover;
+
+    transition: $transition-in;
+
+    path,
+    circle {
+      stroke: $color-hover;
+    }
+  }
+
+  &[disabled] {
+    &,
+    &:hover {
+      color: $color;
+
+      border: 2px solid $border-color;
+      background: $sepia;
+
+      filter: brightness(0.9);
+      opacity: 0.9;
+      cursor: default;
+    }
+
+    path,
+    circle {
+      stroke: $color;
+    }
+  }
+}
+
+@mixin button-colored($color, $bgcolor, $bgcolor-hover) {
+  padding: 12px $Spacing-5;
+
+  color: $color;
+
+  background: $bgcolor;
+  border: 2px solid $bgcolor;
+
+  transition: $transition-out;
+  cursor: pointer;
+
+  &.disabled {
+    &,
+    &:hover {
+      color: #AFAAA0;
+
+      background: rgba(30, 30, 30, 0.06);
+      border: 2px solid transparent;
+
+      transition: $transition-out;
+      cursor: default;
+    }
+  }
+
+  &:hover {
+    background: $bgcolor-hover;
+    border: 2px solid $bgcolor-hover;
+
+    transition: $transition-in;
+  }
+}
+
+@mixin position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+@mixin link {
+  color: $link;
+  border-bottom: 1px solid transparent;
+
+  transition: $transition-out;
+
+  &:hover {
+    border-bottom: 1px solid $link;
+
+    transition: $transition-in;
+  }
+}
