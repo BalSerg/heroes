@@ -15,6 +15,18 @@
     &:last-of-type {
       margin: 0;
 
+      .timeline__item-title {
+        >div {
+          > span {
+            display: flex;
+
+            > svg {
+              margin: auto;
+            }
+          }
+        }
+      }
+
       .timeline-list {
         &:before {
           display: none;

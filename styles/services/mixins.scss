@@ -82,6 +82,10 @@ html.family-serif {
   @include font-medium(2.625rem, 2.25rem);
 }
 
+@mixin font24-medium() {
+  @include font-medium(1.5rem, 1.875rem);
+}
+
 @mixin font18-medium() {
   @include font-medium(1.125rem, 1.75rem);
 }

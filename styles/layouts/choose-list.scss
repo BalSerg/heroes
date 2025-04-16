@@ -39,6 +39,12 @@
       }
     }
 
+    > img {
+      width: 100%;
+      max-width: 65px;
+      flex-shrink: 0;
+    }
+
     &-checkbox {
       width: 24px;
       height: 24px;
@@ -143,10 +149,22 @@
 .is-awards, {
   .choose-list {
     &__item {
+      align-items: center;
+
       &-data {
         > div {
           @include font16-medium;
         }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .choose-list {
+    &__item {
+      > img {
+        max-width: 53px;
       }
     }
   }

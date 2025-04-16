@@ -131,86 +131,139 @@ let alphabet = ['А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д', 'Е'
                 {
                     name: 'Орден «Победа»',
                     text: '(учреждён 8 ноября 1943 года) — одна из самых известных и красивых наград времён Великой Отечественной войны.',
+                    url: 'images/awards/award1.png',
                     id: 465316
                 },
                 {
                     name: 'Орден Ленина',
                     text: '(учреждён в 1930 году) — самая почётная награда, вручалась как военным, так и гражданским лицам за выдающиеся заслуги перед государством и обществом.',
-                    id: 4335941
+                    url: 'images/awards/award2.png',
+                    id: 185493
                 },
                 {
                     name: 'Орден Красной Звезды',
                     text: '(учреждён 6 апреля 1930 года) — вручался военнослужащим всех родов войск, партизанам, воинским частям и учреждениям за заслуги в обороне СССР.',
-                    id: 2760953
+                    url: 'images/awards/award3.png',
+                    id: 695106
                 },
                 {
-                    name: 'Орден Суворова',
+                    name: 'Орден Суворова I степени',
                     text: 'Учреждён Указом Президиума Верховного Совета СССР от 29 июля 1942 года',
-                    id: 4335980
+                    url: 'images/awards/award4_1.png',
+                    id: 286471
+                },
+                {
+                    name: 'Орден Суворова II степени',
+                    text: 'Учреждён Указом Президиума Верховного Совета СССР от 29 июля 1942 года',
+                    url: 'images/awards/award4_2.png',
+                    id: 286471
+                },
+                {
+                    name: 'Орден Суворова III степени',
+                    text: 'Учреждён Указом Президиума Верховного Совета СССР от 29 июля 1942 года',
+                    url: 'images/awards/award4_3.png',
+                    id: 286471
                 },
                 {
                     name: 'Орден Александра Невского',
                     text: '(учреждён в 1725 году) — уникальная награда, присутствовала в наградных системах Российской империи и Советского Союза.',
-                    id: 612907
+                    url: 'images/awards/award5.png',
+                    id: 11798924
                 },
                 {
                     name: 'Орден Кутузова I степени',
                     text: '(учреждён 29 июля 1942 года) — награждались офицеры и партизаны за заслуги в боевых операциях.',
+                    url: 'images/awards/award6.png',
                     id: 21292816
                 },
                 {
                     name: 'Орден Кутузова II степени',
                     text: '(учреждён 29 июля 1942 года) — награждались офицеры и партизаны за заслуги в боевых операциях.',
+                    url: 'images/awards/award7.png',
                     id: 21292818
                 },
                 {
                     name: 'Орден Кутузова III степени',
                     text: '(учреждён 29 июля 1942 года) — награждались офицеры и партизаны за заслуги в боевых операциях.',
+                    url: 'images/awards/award8.png',
                     id: 21292819
                 },
                 {
                     name: 'Орден Нахимова I степени',
                     text: '(учреждён 3 марта 1944 года) — «морская» награда за выдающиеся заслуги на флоте.',
+                    url: 'images/awards/award9.png',
                     id: 27768004
                 },
                 {
                     name: 'Орден Нахимова II степени',
                     text: '(учреждён 3 марта 1944 года) — «морская» награда за выдающиеся заслуги на флоте.',
+                    url: 'images/awards/award10.png',
                     id: 27768005
                 },
                 {
                     name: 'Орден Красного Знамени',
                     text: '(учреждён 16 сентября 1918 года) — высшая награда Советской России до появления ордена Ленина.',
+                    url: 'images/awards/award11.png',
                     id: 337463
                 },
                 {
                     name: 'Орден Отечественной войны I степени',
                     text: '(учреждён 20 мая 1942 года) — вручался за храбрость и мужество в боях рядовым бойцам и офицерам Красной Армии и партизанских отрядов.',
+                    url: 'images/awards/award12.png',
                     id: 18080149
                 },
                 {
                     name: 'Орден Отечественной войны II степени',
                     text: '(учреждён 20 мая 1942 года) — вручался за храбрость и мужество в боях рядовым бойцам и офицерам Красной Армии и партизанских отрядов.',
+                    url: 'images/awards/award13.png',
                     id: 18200478
                 },
                 {
                     name: 'Орден Ушакова I степени',
                     text: '(учреждён 3 марта 1944 года) — награда за выдающиеся заслуги на флоте.',
+                    url: 'images/awards/award14_1.png',
                     id: 25927306
                 },
                 {
                     name: 'Орден Ушакова II степени',
                     text: '(учреждён 3 марта 1944 года) — награда за выдающиеся заслуги на флоте.',
+                    url: 'images/awards/award14_2.png',
                     id: 25927306
                 },
                 {
-                    name: 'Орден Славы',
-                    text: '(учреждён 3 марта 1944 года) — награда за выдающиеся заслуги на флоте.',
+                    name: 'Орден Славы I степени',
+                    text: '(учреждён 8 ноября 1943 года) — вручался военнослужащим рядового состава, сержантам и старшинам за личные заслуги, имел три степени.',
+                    url: 'images/awards/award15_1.png',
+                    id: 122578
+                },
+                {
+                    name: 'Орден Славы II степени',
+                    text: '(учреждён 8 ноября 1943 года) — вручался военнослужащим рядового состава, сержантам и старшинам за личные заслуги, имел три степени.',
+                    url: 'images/awards/award15_2.png',
+                    id: 122578
+                },
+                {
+                    name: 'Орден Славы III степени',
+                    text: '(учреждён 8 ноября 1943 года) — вручался военнослужащим рядового состава, сержантам и старшинам за личные заслуги, имел три степени.',
+                    url: 'images/awards/award15_3.png',
                     id: 122578
                 },
                 {
                     name: 'Орден Богдана Хмельницкого',
                     text: 'учреждён Указом Президиума ВС СССР от 10.10.1943 об учреждении ордена Богдана Хмельницкого I, II и III степени.',
+                    url: 'images/awards/award16_1.png',
+                    id: 201094
+                },
+                {
+                    name: 'Орден Богдана Хмельницкого',
+                    text: 'учреждён Указом Президиума ВС СССР от 10.10.1943 об учреждении ордена Богдана Хмельницкого I, II и III степени.',
+                    url: 'images/awards/award16_2.png',
+                    id: 201094
+                },
+                {
+                    name: 'Орден Богдана Хмельницкого',
+                    text: 'учреждён Указом Президиума ВС СССР от 10.10.1943 об учреждении ордена Богдана Хмельницкого I, II и III степени.',
+                    url: 'images/awards/award16_3.png',
                     id: 201094
                 },
             ]
@@ -221,136 +274,163 @@ let alphabet = ['А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д', 'Е'
                 {
                     name: 'Медаль «Золотая Звезда»',
                     text: '(учреждена 1 августа 1939 года) — вручалась Героям Советского Союза вместе с орденом Ленина.',
+                    url: 'images/awards/award17.png',
                     id: 1948730
                 },
                 {
                     name: 'Медаль «За отвагу»',
                     text: '(учреждена 17 октября 1938 года) — вручалась за личные отвагу и мужество, проявленные при защите Отечества.',
+                    url: 'images/awards/award18.png',
                     id: 1970346
                 },
                 {
                     name: 'Медаль «За боевые заслуги»',
                     text: 'Вручалась военнослужащим РККА, а также гражданам, совершившим подвиг в борьбе против врагов Советского государства, рискуя своей жизнью',
+                    url: 'images/awards/award19.png',
                     id: 1915961
                 },
                 {
                     name: 'Медаль «За оборону Москвы»',
                     text: 'учреждена Указом Президиума ВС СССР от 1 мая 1944 ',
+                    url: 'images/awards/award20.png',
                     id: 1069798
                 },
                 {
                     name: 'Медаль «За оборону Ленинграда»',
                     text: 'государственная награда СССР, для награждения защитников города Ленинград (военнослужащих и мирных жителей)',
-                    id: 14336717
+                    url: 'images/awards/award21.png',
+                    id: 924450
                 },
                 {
                     name: 'Медаль «За оборону Сталинграда»',
                     text: 'учреждена Указом Президиума Верховного Совета СССР от 22 декабря 1942 года',
-                    id: 11019159
+                    url: 'images/awards/award22.png',
+                    id: 241821
                 },
                 {
                     name: 'Медаль «За оборону Одессы»',
                     text: 'учреждена Указом Президиума Верховного Совета СССР от 22 декабря 1942 года',
+                    url: 'images/awards/award23.png',
                     id: 177128
                 },
                 {
                     name: 'Медаль «За оборону Севастополя»',
                     text: 'учреждена Указом Президиума Верховного Совета СССР от 22 декабря 1942 года',
+                    url: 'images/awards/award24.png',
                     id: 1083348
                 },
                 {
                     name: 'Медаль «За оборону Киева»',
                     text: 'учреждена Указом Президиума Верховного Совета СССР от 21 июня 1961 года',
+                    url: 'images/awards/award25.png',
                     id: 1081484
                 },
                 {
                     name: 'Медаль «За оборону Кавказа»',
                     text: 'учреждена Указом Президиума ВС СССР от 1 мая 1944',
+                    url: 'images/awards/award26.png',
                     id: 1067644
                 },
                 {
                     name: 'Медаль «За взятие Берлина»',
                     text: 'государственная награда СССР. Учреждена Указом Президиума Верховного Совета СССР от 9 июня 1945 года',
+                    url: 'images/awards/award27.png',
                     id: 761641
                 },
                 {
                     name: 'Медаль «За освобождение Белграда»',
                     text: '(учреждена 9 июня 1945 года) — вручалась участникам штурма и взятия Белграда',
+                    url: 'images/awards/award28.png',
                     id: 792390
                 },
                 {
                     name: 'Медаль «За освобождение Варшавы»',
                     text: 'учреждена Указом Президиума ВС СССР от 9 июня 1945 года',
+                    url: 'images/awards/award29.png',
                     id: 534676
                 },
                 {
                     name: 'Медаль «За освобождение Праги»',
                     text: 'учреждена Указом Президиума ВС СССР от 9 июня 1945 года',
+                    url: 'images/awards/award30.png',
                     id: 222973
                 },
                 {
                     name: 'Медаль «За взятие Будапешта»',
                     text: 'учреждённая указом президиума Верховного совета СССР от 9 июня 1945 года ',
+                    url: 'images/awards/award31.png',
                     id: 570578
                 },
                 {
                     name: 'Медаль «За взятие Кёнигсберга»',
                     text: 'учреждена Указом Президиума ВС СССР от 9 июня 1945 года',
+                    url: 'images/awards/award32.png',
                     id: 1081503
                 },
                 {
                     name: 'Медаль «За взятие Вены»',
                     text: 'учреждённая Указом Президиума ВС СССР от 9 июня 1945 года',
+                    url: 'images/awards/award33.png',
                     id: 853881
                 },
                 {
                     name: 'Медаль «За победу над Германией в Великой Отечественной войне 1941–1945 гг.»',
                     text: 'Учреждена 9 мая 1945 года, ею награждались все военнослужащие, принимавшие непосредственное участие на фронтах войны, а также выбывшие по ранению',
+                    url: 'images/awards/award34.png',
                     id: 278798
                 },
                 {
                     name: 'Медаль «Партизану Отечественной войны»',
+                    url: 'images/awards/award35.png',
                     text: 'вручалась партизанам и организаторам партизанского движения.',
                     id: 699364
                 },
                 {
                     name: 'Медаль «Серп и Молот»',
                     text: 'Знак особого отличия в СССР, вручавшийся Герою Социалистического Труда наряду с высшей наградой СССР ',
+                    url: 'images/awards/award36.png',
                     id: 1980962
                 },
                 {
                     name: 'Медаль «За оборону Советского Заполярья»',
                     text: 'учреждена Указом Президиума Верховного Совета СССР от 5 декабря 1944 года',
+                    url: 'images/awards/award37.png',
                     id: 462003
                 },
                 {
                     name: 'Медаль Нахимова',
                     text: 'Медалью Нахимова награждались матросы и солдаты, старшины и сержанты, мичманы и прапорщики Военно-Морского Флота и морских частей пограничных войск.',
+                    url: 'images/awards/award38.png',
                     id: 1962419
                 },
                 {
                     name: 'Медаль Ушакова',
                     text: 'Награждались за мужество и отвагу, проявленные при защите социалистического Отечества на морских театрах, как в военное, так и в мирное время',
+                    url: 'images/awards/award39.png',
                     id: 1461466
                 },
                 {
                     name: 'Медаль «За доблестный труд в Великой Отечественной войне 1941–1945 годов»',
                     text: '— вручалась работникам тыла за вклад в победу.',
+                    url: 'images/awards/award40.png',
                     id: 1600457
                 },
                 {
                     name: 'Юбилейная медаль «Двадцать лет Победы в Великой Отечественной войне 1941—1945 гг.» 1965 г.',
                     text: '',
+                    url: 'images/awards/award41.png',
                     id: 783270
                 },
                 {
                     name: 'Юбилейная медаль «Тридцать лет Победы в Великой Отечественной войне 1941—1945 гг.» 1975 г.',
                     text: '',
+                    url: 'images/awards/award42.png',
                     id: 613627
                 },
                 {
                     name: 'Юбилейная медаль «Сорок лет Победы в Великой Отечественной войне 1941—1945 гг.» 1985 г.',
                     text: '',
+                    url: 'images/awards/award43.png',
                     id: 280693
                 },
             ]
@@ -779,6 +859,7 @@ window.addEventListener('load', () => {
 
         elModalAuth = getElement('.js-modal-popup-auth'),
         elButtonCallModalAuth = getElement('.js-modal-call-button-auth'),
+        elModalAuthText = getElement(".js-modal-auth-text"),
         elLogin = getElement('.js-login'),
         elPassword = getElement('.js-password'),
         elButtonShowPassword = getElement('.js-show-password'),
@@ -798,6 +879,8 @@ window.addEventListener('load', () => {
         arrayRadioButtonValue = getArray('.js-radio-button-value'),
         elRadioValue = getElement('.js-radio-value'),
         elSuggestion = getElement('.js-suggest-info'),
+        elRadioChoose = getElement('.js-form-radio-chose'),
+        elRadioChooseWrapper = getElement('.js-form-radio-chose-wrapper'),
         isRequired1 = false,
         isRequired2 = false,
         isNotAlive = false,
@@ -806,6 +889,8 @@ window.addEventListener('load', () => {
         elGotoLanding = getElement('.js-cross-auth'),
 
         arrayFaq = getArray('.js-faq'),
+        arrayFaqText = getArray('.js-faq-text'),
+        arrayFaqTextWrapper = getArray('.js-faq-text-wrapper'),
 
         elButtonLoginInModal = getElement('.js-button-login'),
         elButtonRegInModal = getElement('.js-button-reg'),
@@ -814,7 +899,8 @@ window.addEventListener('load', () => {
         arrayButtonsCallModalListOfLinks = getArray('.js-call-links'),
         elModalListOfLink = getElement('.js-modal-list-of-links'),
         elWrapperModalListOfLink = getElement('.js-wrapper-list-of-links'),
-        elCrossModalListOflInks = getElement('.js-cross-list-of-links');
+        elCrossModalListOflInks = getElement('.js-cross-list-of-links'),
+        isPublish = false;
 
     // Функция проверки авторизвоан ли юзер
     function set_msg(msg) {
@@ -950,7 +1036,7 @@ window.addEventListener('load', () => {
             })
             modal.append(elLayerBackground);
         }
-        if(window.innerWidth > 767 && modal.classList.contains('is-mobile')) {
+        if((window.innerWidth < 767 && modal.classList.contains('is-mobile')) || modal.classList.contains('js-modal-popup-list')) {
             yesScrollBody();
         }
         else {
@@ -1091,10 +1177,17 @@ window.addEventListener('load', () => {
         }
     })
 
-    //Нажатие на текущий вопрос
+    //Нажатие на текущий вопрос в блоке Вопросы и ответы
     arrayFaq.forEach((item, index) => {
         item.addEventListener('click', () => {
             item.classList.toggle('active');
+            if(!arrayFaqText[index].getAttribute('style')) {
+                arrayFaqText[index].style.height = `${arrayFaqTextWrapper[index].offsetHeight}px`;
+            }
+            else {
+                arrayFaqText[index].removeAttribute('style');
+            }
+
         })
     })
     //--------
@@ -1323,9 +1416,15 @@ window.addEventListener('load', () => {
             arrayInputs.forEach((etem) => {
                 etem.addEventListener('input', () => {
                     // Проверяем если все поля заполнены, то переменная в data-fill будет true
-                    item.dataset.fill = arrayInputs.every((otem) => {return otem.value.length >= 2;}).toString();
+                    //item.dataset.fill = arrayInputs.every((otem) => {return otem.value.length >= 2;}).toString();
                     // Если все поля заполнены и в поле год 4 цифры, то все ПОЛНОСТЬЮ заполнено
-                    if(elYear) {
+                    if(etem.value.length >= 2 && !etem.classList.contains('js-year') && !etem.classList.contains('js-date')) {
+                        etem.classList.remove('is-error');
+                    }
+                    if(etem === elDate && elDate.value.length >= 1) {
+                        etem.classList.remove('is-error');
+                    }
+                    /*if(elYear) {
                         if(!elYear.classList.contains('js-year-endCombat')) {
                             if(elYear.value.length > 3  && item.dataset.fill === 'true' && (elDate && elDate.value.length > 0)) {
                                 item.dataset.complete = 'true';
@@ -1337,26 +1436,23 @@ window.addEventListener('load', () => {
                     }
                     else {
                         item.dataset.complete = 'true';
-                    }
-                    if(item.dataset.complete === 'true') {
+                    }*/
+                    /*if(item.dataset.complete === 'true') {
                         item.classList.add('is-complete');
                     }
                     else {
                         item.classList.remove('is-complete');
-                    }
-                    if(elForm.lastName.value.length >=2 && elForm.firstName.value.length >=2 && elForm.middleName.value.length >=2 && elForm.birthDate.value.length>0 && elForm.birthMonth.value.length>0 && elForm.birthYear.value.length >=4 && elForm.birthPlace.value.length >=2 ) {
+                    }*/
+                    if(elForm.lastName.value.length >= 2 && elForm.firstName.value.length >= 2 && elForm.birthDate.value.length > 0 && elForm.birthMonth.value.length > 0 && elForm.birthYear.value.length >= 4 && elForm.birthPlace.value.length >= 2) {
                         isRequired1 = true;
+                        item.classList.add('is-complete');
                     }
                     else {
-                        isRequired1 =false;
+                        isRequired1 = false;
+                        item.classList.remove('is-complete');
                     }
-                    if(elForm.militaryOperations.value.length >= 2 && elForm.endCombatYear.value.length >=4) {
-                        isRequired2 = true;
-                    }
-                    else {
-                        isRequired2 = false;
-                    }
-                    showButton();
+
+                    isRequired2 = elForm.militaryOperations.value.length >= 2;
                     checkIsCompleteBlock();
                     checkIsCompleteSection();
                 })
@@ -1379,38 +1475,91 @@ window.addEventListener('load', () => {
         }
     }
 
+    let isLeapYear = false;
     //Проверка ввода ДАТЫ
     function checkDate() {
-        let arrMonth = [];
-        //if(elSection.querySelector('.js-date')) {
-            arrDates = elSection.querySelectorAll('.js-date');
+        let arrMonth = [],
+            arrYear = [],
+            isBigMonth = false,
+            data = new Date(),
+        arrDates = elSection.querySelectorAll('.js-date');
+        arrMonth = elSection.querySelectorAll('.js-month');
+        arrYear = elSection.querySelectorAll('.js-year');
 
-        //}
-        if(elSection.querySelector('.js-for-month')) {
-            arrMonth = elSection.querySelectorAll('.js-month');
-        }
-        let data = new Date();
         arrDates.forEach((item, index) => {
             item.addEventListener('input', () => {
-                arrayYear = elSection.querySelectorAll('.js-year');
+                let numberMonth = Number(arrMonth[index].previousElementSibling.value);
+                if(arrYear[index].value) {
+                    isLeapYear = arrYear[index].value % 4 === 0;
+                }
                 if (item.value < 0 || item.value === '00') {
                     item.value = '';
                 }
-                if (item.value > 31) {
-                    item.value = 31;
+
+                if(numberMonth) { // если введен месяц
+                    //если месяц имеет 31 день
+                    if((numberMonth < 8 && numberMonth % 2 !==0) || (numberMonth >= 8 && numberMonth % 2 === 0)) {
+                        isBigMonth = true;
+                        item.value = item.value >= 31 ? 31 : item.value;
+                    }
+                    //если в месяце менее 31 дня
+                    else {
+                        isBigMonth = false;
+                        if(numberMonth === 2) {
+                            if(arrYear[index].value) {
+                                if(isLeapYear) {
+                                    item.value = item.value >= 29 ? 29 : item.value;
+                                }
+                                else {
+                                    item.value = item.value >= 28 ? 28 : item.value;
+                                }
+                            }
+                            else {
+                                item.value = item.value >= 28 ? 28 : item.value;
+                            }
+                        }
+                        else {
+                            item.value = item.value >= 30 ? 30 : item.value;
+                        }
+                    }
                 }
+                else if(arrYear[index].value) {//если введен год
+                    if(numberMonth) {
+                        if(isBigMonth) {
+                            item.value >= 31 ? 31 : item.value;
+                        }
+                        else {
+                            if(numberMonth === 2) {
+                                if(isLeapYear) {
+                                    item.value >= 29 ? 29 : item.value;
+                                }
+                                else {
+                                    item.value >= 28 ? 28 : item.value;
+                                }
+                            }
+                            item.value = item.value >= 30 ? 30 : item.value;
+                        }
+                    }
+                    else {
+                        item.value = item.value >=31 ? 31 : item.value;
+                    }
+                }
+                else {
+                    item.value = item.value >=31 ? 31 : item.value;
+                }
+
                 if(item.classList.contains('js-for-date')) {
                     if(item.value.length > 0) {
                         item.classList.add('fill');
-                        checkCompleteDate(item, arrMonth[index], arrayYear[index], item.parentElement.parentElement.parentElement);
+                        checkCompleteDate(item, arrMonth[index], arrYear[index], item.parentElement.parentElement.parentElement);
                     }
                     else {
                         item.classList.remove('fill');
-                        checkCompleteDate(item, arrMonth[index], arrayYear[index], item.parentElement.parentElement.parentElement);
+                        checkCompleteDate(item, arrMonth[index], arrYear[index], item.parentElement.parentElement.parentElement);
                     }
                 }
                 if(item.classList.contains('js-date-endLife')) {
-                    if(arrayYear[index].value >= 2025) {
+                    if(arrYear[index].value >= 2025) {
                         item.value >= data.getDate() ? item.value = data.getDate() : item.value;
                     }
                 }
@@ -1429,11 +1578,16 @@ window.addEventListener('load', () => {
             let inputsDate = getArray('.js-date'),
                 inputsMonth = getArray('.js-month'),
                 inputsYear = getArray('.js-year'),
+                numberMonth,
                 arrList = wrapperList[index].querySelectorAll('.js-list');
+            if(inputsYear[index].value && inputsYear[index].value % 4 === 0) {
+                isLeapYear = true;
+            }
             arrList.forEach((etem, endex) => {
                 etem.addEventListener('click', (e) => {
                     if(!arrListsValue[index].classList.contains('js-rank-list-value')) {
                         arrListsValue[index].value = months[endex];
+                        arrListsValue[index].parentElement.parentElement.classList.remove('is-error');
                     }
                     if(arrListsValue[index].classList.contains('js-required')) {
                         if(elForm.lastName.value.length >=2 && elForm.firstName.value.length >=2 && elForm.middleName.value.length >=2 && elForm.birthDate.value.length>0 && elForm.birthYear.value.length >=4 && elForm.birthPlace.value.length >=2 ) {
@@ -1445,6 +1599,7 @@ window.addEventListener('load', () => {
                     }
 
                     elListHidden[index].value = etem.value;
+                    numberMonth = Number(elListHidden[index].value);
                     if(arrListsValue[index].classList.contains('js-for-month')) {
                         let block;
                         if (arrListsValue[index].parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains('js-block')) {
@@ -1478,6 +1633,29 @@ window.addEventListener('load', () => {
                             elListHidden[index].value = etem.value;
                         }
                     }
+                    if(numberMonth === 2) {
+                        if(inputsYear[index].value) {
+
+                            if(isLeapYear) {
+                                inputsDate[index].value = inputsDate[index].value >= 29 ? 29 : inputsDate[index].value;
+                            }
+                            else {
+                                inputsDate[index].value = inputsDate[index].value >= 28 ? 28 : inputsDate[index].value;
+                            }
+                        }
+                        else {
+                            inputsDate[index].value = inputsDate[index].value >= 28 ? 28 : inputsDate[index].value;
+                        }
+
+                    }
+                    else if((numberMonth < 8 && numberMonth % 2 !== 0) || (numberMonth >= 8 && numberMonth % 2 === 0)){
+                        inputsDate[index].value = inputsDate[index].value >= 31 ? 31 : inputsDate[index].value;
+                    }
+                    else {
+                        inputsDate[index].value = inputsDate[index].value >= 30 ? 30 : inputsDate[index].value;
+                    }
+
+
                     closeModal(e.target.parentElement.parentElement.parentElement, e.target.parentElement.parentElement);
                     e.target.parentElement.parentElement.parentElement.previousElementSibling.classList.remove('active');
                 })
@@ -1489,10 +1667,11 @@ window.addEventListener('load', () => {
     //Проверка ввода ГОДА рождения
     function checkYear() {
         arrayBlocks.forEach((item) => {
-            arrayYear = item.querySelectorAll('.js-year');
-            let elDates = item.querySelector('.js-for-date');
-            let elMonth = item.querySelector('.js-for-month');
-            arrayYear.forEach((etem) => {
+            let arrayYear = item.querySelectorAll('.js-year'),
+                elDates = item.querySelector('.js-date'),
+                elMonth = item.querySelector('.js-month'),
+                numberMonth;
+            arrayYear.forEach((etem, endex) => {
                 etem.addEventListener('input', () => {
                     if (etem.value.length === 4) {
                         let data = new Date;
@@ -1523,12 +1702,35 @@ window.addEventListener('load', () => {
                             }
                         }
                         else {
+                            etem.classList.remove('is-error');
                             if (etem.value < 1820) {
                                 etem.value = 1820;
                             }
                             if (etem.value > 1939) {
                                 etem.value = 1939;
                             }
+                        }
+                        isLeapYear = etem.value % 4 === 0;
+                        numberMonth = Number(elMonth.previousElementSibling.value);
+                        if(isLeapYear) {
+                            if(numberMonth) {
+                                if((numberMonth < 8 && numberMonth % 2 !== 0) || (numberMonth >= 8 && numberMonth % 2 === 0)) {
+                                    elDates.value = elDates.value >= 31 ? 31 : elDates.value;
+                                }
+                                else {
+                                    elDates.value = elDates.value >= 30 ? 30 : elDates.value;
+                                }
+                                if(numberMonth === 2) {
+                                    elDates.value = elDates.value >= 29 ? 29 : elDates.value;
+                                }
+                                else {
+                                    elDates.value = elDates.value >= 28 ? 28 : elDates.value;
+                                }
+                            }
+                            else {
+                                elDates.value = elDates.value >= 31 ? 31 : elDates.value;
+                            }
+
                         }
                     }
                     if (etem.value.length > 4) {
@@ -1949,10 +2151,12 @@ window.addEventListener('load', () => {
                         elDivBlock.classList.add('choose-list-block');
                         elDivBlock.innerHTML = `<div class="choose-list-block__title">${etem.title}</div>`;
                         etem.content.forEach((otem) => {
-                            let elLabelItem = document.createElement('LABEL');
+                            let elLabelItem = document.createElement('LABEL'),
+                                elUrl = `<img src="${otem.url}">`;
                             elLabelItem.classList.add('choose-list__item');
                             elLabelItem.innerHTML =`<input type="checkbox" name="choose" class="js-choose" value="${otem.id}"/>
                                                     <span class="choose-list__item-checkbox"></span>
+                                                    ${otem.url ? elUrl : ''}
                                                     <div class="choose-list__item-data">
                                                         <input type="hidden" value="${otem.name}"/>
                                                         <div>${otem.name}</div>
@@ -1988,7 +2192,7 @@ window.addEventListener('load', () => {
                                 if(etem.checked) {
                                     arrayChosenAwardValue.push(etem.value);// При выборе на элемент выбора заполняем массив выбранных значений
                                     //arrayChosenAwardValue = Array.from(new Set(arrayChosenAwardValue1));
-                                    arrayChooseItemNameAward.push(etem.nextElementSibling.nextElementSibling.querySelector('div').textContent);
+                                    arrayChooseItemNameAward.push(etem.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('div').textContent);
                                     //arrayChooseItemNameAward = Array.from(new Set(arrayChooseItemNameAward1));
                                 }
                                 else {
@@ -2025,13 +2229,25 @@ window.addEventListener('load', () => {
                     resultElements = [];
                     resultIndex = [];
                     for(let i of arrayChooseItem) {
-                        i.nextElementSibling.nextElementSibling.children[1].textContent = i.nextElementSibling.nextElementSibling.firstElementChild.value;
-                        if(i.nextElementSibling.nextElementSibling.firstElementChild.value.toLowerCase().indexOf(elSearchModal.value.toLowerCase()) !== -1) {
-                            // все индексы первого совпадения
-                            resultIndex.push(i.nextElementSibling.nextElementSibling.firstElementChild.value.toLowerCase().indexOf(elSearchModal.value.toLowerCase()));
-                            //---
-                            resultElements.push(i.nextElementSibling.nextElementSibling.children[1]);// Все дивы с нзавнием
-                            resultSearchModal.push(i.parentElement);// все элементы с совпашим запросом
+                        if(item.classList.contains('js-has-awards')) {
+                            i.nextElementSibling.nextElementSibling.nextElementSibling.children[1].textContent = i.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value;
+                            if (i.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.toLowerCase().indexOf(elSearchModal.value.toLowerCase()) !== -1) {
+                                // все индексы первого совпадения
+                                resultIndex.push(i.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.toLowerCase().indexOf(elSearchModal.value.toLowerCase()));
+                                //---
+                                resultElements.push(i.nextElementSibling.nextElementSibling.nextElementSibling.children[1]);// Все дивы с нзавнием
+                                resultSearchModal.push(i.parentElement);// все элементы с совпашим запросом
+                            }
+                        }
+                        if(item.classList.contains('js-has-battle')) {
+                            i.nextElementSibling.nextElementSibling.children[1].textContent = i.nextElementSibling.nextElementSibling.firstElementChild.value;
+                            if (i.nextElementSibling.nextElementSibling.firstElementChild.value.toLowerCase().indexOf(elSearchModal.value.toLowerCase()) !== -1) {
+                                // все индексы первого совпадения
+                                resultIndex.push(i.nextElementSibling.nextElementSibling.firstElementChild.value.toLowerCase().indexOf(elSearchModal.value.toLowerCase()));
+                                //---
+                                resultElements.push(i.nextElementSibling.nextElementSibling.children[1]);// Все дивы с нзавнием
+                                resultSearchModal.push(i.parentElement);// все элементы с совпашим запросом
+                            }
                         }
                     }
                     if(resultSearchModal.length) {
@@ -2062,7 +2278,7 @@ window.addEventListener('load', () => {
                         div.classList.add('js-chosen');
                         div.innerHTML = `${icon}
                         <input type="hidden" class="js-chosen-value" name="battle${endex + 1}" value="${etem}"/>
-                        <a href="https://ru.ruwiki.ru/wiki/Участник:${etem}" target="_blank" class="form-links__item-text js-link-url" data-current="0">${arrayChooseItemNameBattle[endex]}</a>
+                        <a href="https://ru.ruwiki.ru/wiki/${arrayChooseItemNameBattle[endex]}" target="_blank" class="form-links__item-text" data-current="0">${arrayChooseItemNameBattle[endex]}</a>
                         <div class="form-links__item-for-button">
                             <div class="form-links__item-button js-chosen-delete">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -2080,7 +2296,7 @@ window.addEventListener('load', () => {
                         div.classList.add('js-chosen');
                         div.innerHTML = `${icon}
                         <input type="hidden" class="js-chosen-value" name="award${endex + 1}" value="${etem}"/>
-                        <a href="https://ru.ruwiki.ru/wiki/${etem}" target="_blank" class="form-links__item-text js-link-url" data-current="0">${arrayChooseItemNameAward[endex]}</a>
+                        <a href="https://ru.ruwiki.ru/wiki/${arrayChooseItemNameAward[endex]}" target="_blank" class="form-links__item-text" data-current="0">${arrayChooseItemNameAward[endex]}</a>
                         <div class="form-links__item-for-button">
                             <div class="form-links__item-button js-chosen-delete">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -2162,6 +2378,8 @@ window.addEventListener('load', () => {
         //arrayRadioButton[0].checked = true;
         elForm = document.forms.formHero;
         item.addEventListener('change', () => {
+            elRadioChooseWrapper.style.height = `${elRadioChoose.offsetHeight}px`;
+            elRadioChooseWrapper.classList.add('active');
             item.parentElement.parentElement.parentElement.classList.add('is-complete');
             item.value = arrayRadioButtonValue[index].textContent;
             elRadioValue.value = item.value;
@@ -2170,21 +2388,12 @@ window.addEventListener('load', () => {
             elForm.endCombatYear.value ='';
             elForm.endCombatMonth.value = '';
             elForm.endCombatMonth.nextElementSibling.value = '';
-            isRequired2 = elForm.endCombatYear.value.length >= 4;
             switch(item.value) {
                 case 'Прошёл всю войну':
                     isNotAlive = false;
                     elSuggestion.innerHTML = `<span>Укажите страну, регион или населенный пункт, где ветеран закончил свой боевой путь.</span>`;
                     elPublish.classList.add('is-hidden');
                     elNext.classList.remove('is-hidden');
-                    if(isRequired2) {
-                        elNext.classList.remove('disabled');
-                        elNext.removeAttribute('disabled');
-                    }
-                    else {
-                        elNext.classList.add('disabled');
-                        elNext.setAttribute('disabled','disabled');
-                    }
                     arrayTimelineItems[2].classList.remove('is-hidden');
                     break;
                 case 'Погиб':
@@ -2193,14 +2402,6 @@ window.addEventListener('load', () => {
                     elPublish.classList.remove('is-hidden');
                     elNext.classList.add('is-hidden');
                     arrayTimelineItems[2].classList.add('is-hidden');
-                    if(isRequired2) {
-                        elPublish.classList.remove('disabled');
-                        elPublish.removeAttribute('disabled');
-                    }
-                    else {
-                        elPublish.classList.add('disabled');
-                        elPublish.setAttribute('disabled','disabled');
-                    }
                     break;
                 case 'Пропал без вести':
                     isNotAlive = true;
@@ -2208,14 +2409,6 @@ window.addEventListener('load', () => {
                     elPublish.classList.remove('is-hidden');
                     elNext.classList.add('is-hidden');
                     arrayTimelineItems[2].classList.add('is-hidden');
-                    if(isRequired2) {
-                        elPublish.classList.remove('disabled');
-                        elPublish.removeAttribute('disabled');
-                    }
-                    else {
-                        elPublish.classList.add('disabled');
-                        elPublish.setAttribute('disabled','disabled');
-                    }
                     break;
             }
 
@@ -2248,6 +2441,38 @@ window.addEventListener('load', () => {
         return collect;
     }
 
+    function showEmptyRequiredField() {
+        let arrReq =[];
+        arrayBlocks.forEach((item) => {
+            item.querySelectorAll('.js-required').forEach((etem) => {
+                arrReq.push(etem);
+            })
+        })
+        arrReq.forEach((item) => {
+            if(item.classList.contains('js-month') && !item.value) {
+                item.parentElement.parentElement.classList.add('is-error');
+            }
+            if(item.classList.contains('js-year') && item.value.length < 4) {
+                item.classList.add('is-error');
+            }
+            if(item.value.length < 2 && !item.classList.contains('js-month') && !item.classList.contains('js-year') && !item.classList.contains('js-date')) {
+                item.classList.add('is-error');
+            }
+            if(item.classList.contains('js-date') && item.value.length < 1) {
+                item.classList.add('is-error');
+            }
+        })
+        for(let item of arrReq) {
+            if(item.value.length < 2 && !item.classList.contains('js-year')) {
+                window.scrollTo({
+                    top: item.offsetTop - 100,
+                    behavior: 'smooth'
+                })
+                break;
+            }
+        }
+    }
+
     function saveState1() {
         const data_send = new FormData();
 
@@ -2258,7 +2483,6 @@ window.addEventListener('load', () => {
                 data_send.append('photos1[]', filesSelfData1[i]);
             }
         }
-
 
         let ref1 = elForm.ref1 ? elForm.ref1.value : '',
             ref2 = elForm.ref2 ? elForm.ref2.value : '' ,
@@ -2437,10 +2661,64 @@ window.addEventListener('load', () => {
         });
     }
 
+    function waiting() {
+        let seconds = 10,//60,
+            valueTime,
+            timer,
+            isA = false;
+        /*window.setTimeout(() => {
+            isA = true;
+        }, 5000)*/
+        getElement(".js-timer").innerHTML = '1 : 00';
+        timer = window.setInterval(function() {
+            //if(!isPublish()) {
+            if (seconds >0 ) { // so it doesn't go to -1
+                seconds--;
+            }
+            if(seconds < 60) { // I want it to say 1:00, not 60
+                if(seconds < 10) {
+                    valueTime = `0${seconds}`;
+                }
+                else {
+                    valueTime = seconds;
+                }
+                getElement(".js-timer").innerHTML = `00 : ${valueTime}`;
+            }
+
+            if(seconds <= 0) {
+                getElement('.js-timer').classList.add('is-hidden');
+                getElement('.js-timer').textContent = '';
+                elModalAuthText.classList.add('is-hidden');
+                elGotoLanding.classList.remove('is-hidden');
+                getElement('.js-modal-auth-info').classList.remove('is-hidden');
+                getElement('.js-modal-auth-info').textContent = 'Для публикации статьи нам понадобится чуть больше времени.Вы сможете найти свою статью в личном кабинете в разделе «Мастерская» - «Мои статьи».';
+                getElement('.js-modal-auth-button').classList.remove('is-hidden');
+
+                clearInterval(timer);
+            }
+            if(isPublish) {
+                clearInterval(timer);
+                seconds = 60;
+                getElement('.js-timer').classList.add('is-hidden');
+                getElement('.js-timer').textContent = '';
+                elModalAuthText.classList.add('is-hidden');
+                getElement('.js-modal-auth-info').classList.remove('is-hidden');
+                getElement('.js-modal-auth-info').textContent = 'Поздравляем! Ваша статья опубликована.';
+                getElement('.js-modal-auth-button-article').classList.remove('is-hidden');
+                elGotoLanding.classList.remove('is-hidden');
+            }
+
+        }, 1000); // every second
+    }
+
+    function setIsPublish() {
+        return isPublish = true;
+    }
+
     function stateFinal() {
         $.ajax({
             url: this_host + "/api/save-data-step-final",
-            async: false,
+            async: true,
             type: 'POST',
             dataType: 'json',
             processData: false, // Важно для FormData!
@@ -2448,83 +2726,62 @@ window.addEventListener('load', () => {
             traditional: true,
             cache: false,
             //data: data_send,
-            success: function () {
-                console.log('OK');
+            success: function (msg) {
+                setIsPublish();
+                getElement('.js-goto-article').href = msg.page_url;
             }
         });
     }
 
     elNext.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
         switch (numberSection) {
             case 1:
-                saveState1();
-                numberSection++;
-                elNext.textContent = 'Послевоенные годы';
-                elPrev.classList.remove('is-hidden');
-                if(isRequired2 && isNotAlive) {
-                    elPublish.classList.remove('disabled');
-                    elPublish.removeAttribute('disabled');
-                    elPublish.classList.remove('is-hidden');
-                    elNext.classList.add('is-hidden');
+                if(isRequired1) {
+                    saveState1();
+                    numberSection++;
+                    elNext.textContent = 'Послевоенные годы';
+                    elPrev.classList.remove('is-hidden');
+                    if(isRequired2 && isNotAlive) {
+                        elPublish.classList.remove('disabled');
+                        elNext.classList.add('is-hidden');
+                    }
+                    if(isRequired2 && !isNotAlive) {
+                        elNext.classList.remove ('is-hidden');
+                        elPublish.classList.add('is-hidden');
+                    }
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    })
                 }
-                if(!isRequired2 && !isNotAlive) {
-                    elNext.classList.add('disabled');
-                    elNext.setAttribute('disabled', 'disabled');
+                else {
+                    showEmptyRequiredField();
                 }
-                if(isRequired2 && !isNotAlive) {
-                    elNext.classList.remove ('is-hidden');
-                    elNext.classList.remove('disabled');
-                    elNext.removeAttribute('disabled');
-                    elPublish.classList.add('is-hidden');
-                }
-                if(!isRequired2 && isNotAlive) {
-                    elNext.classList.add('is-hidden');
-                    elPublish.classList.remove('is-hidden');
-                    elPublish.classList.add('disabled');
-                    elPublish.setAttribute('disabled', 'disabled');
-                }
-                /*if(!arrayTimelineItems[1].querySelectorAll('.js-for-block')[2].classList.contains('is-complete')) {
-                    arrayTimelineItems[1].querySelectorAll('.js-for-block')[2].classList.add('is-complete');
-                }
-                if(!getElement('.js-state2').querySelectorAll('.js-block')[2].classList.contains('is-complete')) {
-                    getElement('.js-state2').querySelectorAll('.js-block')[2].classList.add('is-complete');
-                    getArray('.js-for-block')[10].classList.add('is-complete');
-                }*/
                 break;
             case 2:
-                saveState2();
-                if(isRequired2 && isNotAlive) {
-                    elPublish.classList.remove('disabled');
-                    elPublish.removeAttribute('disabled');
-                    elPublish.classList.remove('is-hidden');
-                    elNext.classList.add('is-hidden');
+                if(isRequired2) {
+                    saveState2();
+                    numberSection++;
+                    if(isRequired2 && isNotAlive) {
+                        elPublish.classList.remove('is-hidden');
+                        elNext.classList.add('is-hidden');
+                    }
+                    if(isRequired2 && !isNotAlive) {
+                        elNext.classList.remove ('is-hidden');
+                        elPublish.classList.add('is-hidden');
+                    }
+
+                    if(numberSection === 3) {
+                        elPublish.classList.remove('is-hidden');
+                        elNext.classList.add('is-hidden');
+                    }
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    })
                 }
-                if(!isRequired2 && !isNotAlive) {
-                    elNext.classList.add('disabled');
-                    elNext.setAttribute('disabled', 'disabled');
-                }
-                if(isRequired2 && !isNotAlive) {
-                    elNext.classList.remove ('is-hidden');
-                    elNext.classList.remove('disabled');
-                    elNext.removeAttribute('disabled');
-                    elPublish.classList.add('is-hidden');
-                }
-                if(!isRequired2 && isNotAlive) {
-                    elNext.classList.add('is-hiddem');
-                    elPublish.classList.remove('is-hidden');
-                    elPublish.classList.add('disabled');
-                    elPublish.setAttribute('disabled', 'disabled');
-                }
-                numberSection++;
-                if(numberSection === 3) {
-                    elPublish.classList.remove('is-hidden');
-                    elPublish.classList.remove('disabled');
-                    elPublish.removeAttribute('disabled');
-                    elNext.classList.add('is-hidden');
+                else {
+                    showEmptyRequiredField();
                 }
                 break;
             case 3:
@@ -2534,6 +2791,7 @@ window.addEventListener('load', () => {
                 elNext.classList.add('is-hidden');
                 break;
         }
+
         getBlocks();
         showSection();
         checkInputFields();
@@ -2588,13 +2846,16 @@ window.addEventListener('load', () => {
     })
 
     elPublish.addEventListener('click', () => {
+        waiting();
         if(numberSection === 2 && isNotAlive) {
             saveState2();
             stateFinal();
+            waiting();
         }
         if(numberSection === 3) {
             saveState3();
             stateFinal();
+            waiting();
         }
     })
 })

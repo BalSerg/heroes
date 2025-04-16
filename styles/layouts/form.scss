@@ -165,6 +165,13 @@
       border-radius: $Radius-2;
       border: 1px solid var(--text-gray-secondary);
 
+      transition: $transition-out;
+
+      &.is-error {
+        border: 1px solid $orange;
+        transition: $transition-in;
+      }
+
       input {
         @include font16;
 
@@ -522,7 +529,7 @@
   }
 
   &-button-links {
-    @include font16-semibold;
+    @include font16-medium;
     @include button-bordered(var(--text-color-primary), $orange, var(--text-gray-secondary),  $Radius-2);
 
     display: inline-flex;
@@ -829,7 +836,6 @@
   }
 
   &-radio {
-    margin: 0 0 $Spacing-5;
     display: flex;
     align-items: center;
     gap: 0 $Spacing-4;
@@ -895,11 +901,36 @@
 
   &-radio-chose {
     padding: 0 0 0 20px;
-    margin: 0 0 0 12px;
+    margin: $Spacing-5 0 0 12px;
     border-left: 1px solid #AFAAA0;
+
+    &-wrapper {
+      height: 0;
+      overflow: hidden;
+
+      transition: $transition-in;
+      transform: scaleY(0);
+      transform-origin: top;
+
+      &.active {
+        overflow: initial;
+
+        transform: scaleY(1);
+
+        transition: $transition-in;
+      }
+    }
 
     .form-suggest {
       margin: 0 0 $Spacing-2;
+
+      >span {
+        @include font16;
+      }
+    }
+
+    .form-for-input__subtitle {
+      @include font16;
     }
   }
 }
@@ -1002,6 +1033,18 @@
 
         &:last-of-type {
           margin: 0;
+        }
+      }
+
+      &-chose {
+        .form-suggest {
+          >span {
+            @include font14;
+          }
+        }
+
+        .form-for-input__subtitle {
+          @include font14;
         }
       }
     }

@@ -78,16 +78,36 @@
     &-text {
       @include font16;
 
-      padding: $Spacing-2 0 0 $Spacing-5;
-      display: none;
+      padding: 0 0 0 $Spacing-5;
+      height: 0;
+      overflow: hidden;
 
       transition: $transition-out;
 
-      >div {
-        margin: 0 0 $Spacing-3;
+      &-wrapper {
+        padding: $Spacing-2 0 0;
 
-        &:last-of-type {
-          margin: 0;
+        >div {
+          margin: 0 0 $Spacing-3;
+
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+
+        >strong {
+          @include font16-semibold;
+        }
+
+        a {
+          @include link;
+        }
+
+        >ul {
+          margin: $Spacing-2 0 0;
+          padding: 0 0 0 $Spacing-3;
+
+          list-style-type: disc;
         }
       }
     }

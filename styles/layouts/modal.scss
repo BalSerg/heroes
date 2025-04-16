@@ -192,7 +192,7 @@
       }
 
       &-text {
-        @include font18-medium;
+        @include font16;
 
         margin: 0 auto $Spacing-5;
         max-width: 650px;
@@ -260,6 +260,13 @@
       &-info {
         max-width: 560px;
         margin: 0 auto 60px;
+
+        &.timer {
+          @include font24-medium;
+
+          max-width: max-content;
+          margin-bottom: 0;
+        }
       }
     }
   }
