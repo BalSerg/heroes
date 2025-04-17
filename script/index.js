@@ -4,7 +4,7 @@ let alphabet = ['А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д', 'Е'
     months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'],
     alphabetSmall = [',', '.', ' ', ...alphabet],
     middleSpread = ['/', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
-    bigSpread = [':', ';', '(', ')', ...middleSpread],
+    bigSpread = [':', ';', '(', ')', '№', ...middleSpread],
     alphabetMiddle = [...alphabetSmall, ...middleSpread],
     alphabetBig = [...alphabetSmall, ...bigSpread],
     rank = [
@@ -941,7 +941,7 @@ window.addEventListener('load', () => {
 
         //data_send['input'] = "";
         $.ajax({
-            url: this_host + "/api/get-user",
+            url: this_host + "/index.php?r=api/get-user",
             async: false,
             type: 'GET',
             dataType: 'JSON',
@@ -977,7 +977,7 @@ window.addEventListener('load', () => {
         data_send['inputLogin'] = elLogin.value;
         data_send['inputPasswd'] = elPassword.value;
         $.ajax({
-            url: this_host + "/api/user-login",
+            url: this_host + "/index.php?r=api/user-login",
             async: false,
             type: 'POST',
             dataType: 'JSON',
@@ -1178,7 +1178,7 @@ window.addEventListener('load', () => {
     })
 
     //Нажатие на текущий вопрос в блоке Вопросы и ответы
-    arrayFaq.forEach((item, index) => {
+    /*arrayFaq.forEach((item, index) => {
         item.addEventListener('click', () => {
             item.classList.toggle('active');
             if(!arrayFaqText[index].getAttribute('style')) {
@@ -1188,6 +1188,27 @@ window.addEventListener('load', () => {
                 arrayFaqText[index].removeAttribute('style');
             }
 
+        })
+    })*/
+    arrayFaq.forEach((item, index) => {
+        item.addEventListener('click', function() {
+            for(let i of arrayFaq) {
+                if(i !== item) {
+                    i.classList.remove('active');
+                    i.querySelector('.js-faq-text').removeAttribute('style');
+                }
+            }
+            if(item === this) {
+                item.classList.toggle('active');
+            }
+            if(item.classList.contains('active')) {
+                if(!arrayFaqText[index].getAttribute('style')) {
+                    arrayFaqText[index].style.height = `${arrayFaqTextWrapper[index].offsetHeight}px`;
+                }
+            }
+            else {
+                arrayFaqText[index].removeAttribute('style');
+            }
         })
     })
     //--------
@@ -1676,13 +1697,37 @@ window.addEventListener('load', () => {
                     if (etem.value.length === 4) {
                         let data = new Date;
                         if(etem.classList.contains('js-year-endCombat')) {
+                            if(elForm.recruitYear.value) {
+                                etem.value = getElement('.js-year-call').value > etem.value ? getElement('.js-year-call').value : etem.value;
+                            }
                             if(isNotAlive) {
                                 etem.value > 1945 ? etem.value = 1945 : etem.value;
                             }
                             else {
-                                etem.value > data.getFullYear() ? etem.value = data.getFullYear() : etem.value;
+                                if(Number(etem.value) > Number(data.getFullYear())) {
+                                    etem.value > data.getFullYear() ? etem.value = data.getFullYear() : etem.value;
+                                    elDates.value = elDates.value > data.getDate() ? data.getDate() : elDates.value;
+                                    if(Number(elMonth.previousElementSibling.value) > data.getMonth()) {
+                                        elMonth.value = months[data.getMonth()];
+                                    }
+                                }
                             }
                             etem.value < 1941 ? etem.value = 1941 : etem.value;
+
+                            if(elForm.recruitYear.value && elForm.recruitMonth.value) {//если год призыва и месяц призыва введены
+                                if(elForm.recruitYear.value >= elForm.endCombatYear.value) { // и если год призыва больше или равен году завершения боевого пути
+                                    // то месяц завершения боевого пути будет либо таким же как месяц призыва либо меньшим
+                                    elMonth.value = elForm.endCombatMonth.value >= elForm.recruitMonth.value ? months[Number(elForm.recruitMonth.value) - 1] : elMonth.value;
+                                }
+                            }
+
+                            if(elForm.recruitYear.value && elForm.recruitMonth.value && elForm.recruitDate.value) {
+                                if(elForm.recruitYear.value >= elForm.endCombatYear.value) {
+                                    if(elForm.endCombatMonth.value >= elForm.recruitMonth.value) {
+                                        elForm.endCombatDate.value = elForm.endCombatDate.value >= elForm.recruitDate.value ? elForm.recruitDate.value : elForm.endCombatDate.valueж
+                                    }
+                                }
+                            }
                         }
                         else if(etem.classList.contains('js-year-call')) {
                             etem.value < 1900 ? etem.value = 1900 : etem.value;
@@ -1722,9 +1767,6 @@ window.addEventListener('load', () => {
                                 }
                                 if(numberMonth === 2) {
                                     elDates.value = elDates.value >= 29 ? 29 : elDates.value;
-                                }
-                                else {
-                                    elDates.value = elDates.value >= 28 ? 28 : elDates.value;
                                 }
                             }
                             else {
@@ -2505,7 +2547,7 @@ window.addEventListener('load', () => {
         data_send.append('selfRefUrl5', ref5);
 
         $.ajax({
-            url: this_host + "/api/save-data-step-one",
+            url: this_host + "/index.php?r=api/save-data-step-one",
             async: false,
             type: 'POST',
             dataType: 'json',
@@ -2597,7 +2639,7 @@ window.addEventListener('load', () => {
         data_send.set('deathDate', endCombatPathData);
 
         $.ajax({
-            url: this_host + "/api/save-data-step-two",
+            url: this_host + "/index.php?r=api/save-data-step-two",
             async: false,
             type: 'POST',
             dataType: 'json',
@@ -2646,7 +2688,7 @@ window.addEventListener('load', () => {
         data_send.set('afterDateDeath', endData);
 
         $.ajax({
-            url: this_host + "/api/save-data-step-three",
+            url: this_host + "/index.php?r=api/save-data-step-three",
             async: false,
             type: 'POST',
             dataType: 'json',
@@ -2662,7 +2704,7 @@ window.addEventListener('load', () => {
     }
 
     function waiting() {
-        let seconds = 10,//60,
+        let seconds = 60,
             valueTime,
             timer,
             isA = false;
@@ -2717,7 +2759,7 @@ window.addEventListener('load', () => {
 
     function stateFinal() {
         $.ajax({
-            url: this_host + "/api/save-data-step-final",
+            url: this_host + "/index.php?r=api/save-data-step-final",
             async: true,
             type: 'POST',
             dataType: 'json',
@@ -2845,7 +2887,7 @@ window.addEventListener('load', () => {
         highlightCurrentTimelineItem();
     })
 
-    elPublish.addEventListener('click', () => {
+    function fn() {
         waiting();
         if(numberSection === 2 && isNotAlive) {
             saveState2();
@@ -2857,6 +2899,9 @@ window.addEventListener('load', () => {
             stateFinal();
             waiting();
         }
+    }
+    elPublish.addEventListener('click', fn, {
+        once: true
     })
 })
 
