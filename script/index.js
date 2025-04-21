@@ -771,7 +771,7 @@ function yesScrollBody() {
     document.body.style.overflow = 'auto';
 }
 let fileData,
-    this_host = 'https://forphp.ruwiki.ru';
+    this_host = 'https://portals.ruwiki.ru/nashi-geroi/web/api'; //https://forphp.ruwiki.ru
 window.addEventListener('load', () => {
     let
         elForm = document.forms.formHero,
@@ -2186,7 +2186,7 @@ window.addEventListener('load', () => {
                           </svg>`
                 }
                 //---
-                if(elChosen.childNodes.length === 0 && elChosen.childNodes.length === 0) {// Услвоие по которому содержимое модалки создается только 1 раз
+                if(elChosen.childNodes.length === 0) {// Услвоие по которому содержимое модалки создается только 1 раз
                     arrayData.forEach((etem) => {
                         // Создаем наполнение модалки и добавляем его
                         let elDivBlock = document.createElement('div');

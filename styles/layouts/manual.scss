@@ -31,6 +31,10 @@
     @include font16;
 
     margin: 0 0 $Spacing-3;
+
+    a {
+      @include link;
+    }
   }
 
   .timeline {
