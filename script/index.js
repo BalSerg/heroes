@@ -900,11 +900,16 @@ window.addEventListener('load', () => {
         elModalListOfLink = getElement('.js-modal-list-of-links'),
         elWrapperModalListOfLink = getElement('.js-wrapper-list-of-links'),
         elCrossModalListOflInks = getElement('.js-cross-list-of-links'),
-        isPublish = false;
+        isPublish = false,
+        isAuth = false,
+
+        elModalLoader = getElement('.js-modal-loader');
 
     // Функция проверки авторизвоан ли юзер
     function set_msg(msg) {
+        elModalLoader.classList.remove('active');
         if (!msg.data.user_info.result) { // юзер не авторизован
+            isAuth = false;
             elModalAuth.classList.add('active');
             elButtonCallModalAuth.classList.remove('is-auth');
             elButtonCallModalAuth.querySelector('span').textContent = 'Войти';
@@ -920,6 +925,7 @@ window.addEventListener('load', () => {
             })
         }
         else { // юзер авторизован
+            isAuth = true;
             elModalAuth.classList.remove('active');
             elButtonCallModalAuth.classList.add('is-auth');
             elButtonCallModalAuth.querySelector('span').textContent = msg.data.user_info.name;
@@ -965,11 +971,15 @@ window.addEventListener('load', () => {
             }
         }
         if(msg.data.user_info.result === true){
+            isAuth = true;
             elModalAuth.classList.remove('active');
             elButtonCallModalAuth.classList.add('is-auth');
             elButtonCallModalAuth.querySelector('span').textContent = msg.data.user_info.name;
             elButtonCallModalAuth.setAttribute('disabled', 'disabled');
             elHeader.classList.remove('active');
+        }
+        else {
+            isAuth = false;
         }
     }
     elButtonLogin.addEventListener('click', () => {
@@ -1436,6 +1446,12 @@ window.addEventListener('load', () => {
                 elYear = item.querySelector('.js-year') ? item.querySelector('.js-year') : '';
             arrayInputs.forEach((etem) => {
                 etem.addEventListener('input', () => {
+                    //Если юзер не залогинен, то модалку логина показываем
+                    if(!isAuth) {
+                        openModal(elModalAuth, getElement('.js-modal-wrapper-auth'));
+                    }
+                    //----
+
                     // Проверяем если все поля заполнены, то переменная в data-fill будет true
                     //item.dataset.fill = arrayInputs.every((otem) => {return otem.value.length >= 2;}).toString();
                     // Если все поля заполнены и в поле год 4 цифры, то все ПОЛНОСТЬЮ заполнено
@@ -2145,7 +2161,8 @@ window.addEventListener('load', () => {
         arrayChosenAwardValue1 = [],
         arrayData = [],
         elSearchModal,
-        icon;
+        icon,
+        isCreate = false;
     getArray('.js-block').forEach((item) => {
         elButtonsCallModalChoose = item.querySelector('.js-modal-call-button-add-choose');
         if(elButtonsCallModalChoose) {
@@ -2210,6 +2227,7 @@ window.addEventListener('load', () => {
                         if(elMultiChooseList.childNodes.length < arrayData.length) {
                             elMultiChooseList.append(elDivBlock);
                         }
+                        isCreate = true;
                         //---
                     })
                     arrayChooseItem = elMultiChooseList.querySelectorAll('.js-choose');// массив элементов выбора
