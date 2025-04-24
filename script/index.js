@@ -2221,6 +2221,7 @@ window.addEventListener('load', () => {
                                                         <div>${otem.name}</div>
                                                         <span>${otem.text}</span>
                                                     </div>`;
+                            elLabelItem.querySelector('.js-choose').addEventListener('change', changeItem);
                             elDivBlock.append(elLabelItem);
                         })
                         // Добавляем в модалку столько содержимого сколько элементов в массиве arrayData
@@ -2228,56 +2229,8 @@ window.addEventListener('load', () => {
                             elMultiChooseList.append(elDivBlock);
                         }
                         isCreate = true;
+                        arrayChooseItem = elMultiChooseList.querySelectorAll('.js-choose');// массив элементов выбора
                         //---
-                    })
-                    arrayChooseItem = elMultiChooseList.querySelectorAll('.js-choose');// массив элементов выбора
-                    // Запускаем обработчик изменения (клике) кажлого элемента выбора
-                    arrayChooseItem.forEach((etem, endex) => {
-                        etem.addEventListener('change', (e) => {
-                            if(item.classList.contains('js-has-battle')) {
-                                if(etem.checked) {
-                                    arrayChosenBattleValue.push(etem.value);// При выборе на элемент выбора заполняем массив выбранных значений
-                                    //arrayChosenBattleValue = Array.from(new Set(arrayChosenBattleValue1));
-                                    arrayChooseItemNameBattle.push(etem.nextElementSibling.nextElementSibling.querySelector('div').textContent);
-                                    //arrayChooseItemNameBattle =Array.from(new Set(arrayChooseItemNameBattle1));
-                                }
-                                else {
-                                    // когда снимаем выбор удаляем этот элемент из массива
-                                    let startPos = arrayChosenBattleValue.indexOf(etem.value);
-                                    arrayChosenBattleValue.splice(startPos, 1);
-                                    arrayChooseItemNameBattle.splice(startPos, 1);
-                                }
-                            }
-                            if(item.classList.contains('js-has-awards')) {
-                                if(etem.checked) {
-                                    arrayChosenAwardValue.push(etem.value);// При выборе на элемент выбора заполняем массив выбранных значений
-                                    //arrayChosenAwardValue = Array.from(new Set(arrayChosenAwardValue1));
-                                    arrayChooseItemNameAward.push(etem.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('div').textContent);
-                                    //arrayChooseItemNameAward = Array.from(new Set(arrayChooseItemNameAward1));
-                                }
-                                else {
-                                    // когда снимаем выбор удаляем этот элемент из массива
-                                    let startPos = arrayChosenAwardValue.indexOf(etem.value);
-                                    arrayChosenAwardValue.splice(startPos, 1);
-                                    arrayChooseItemNameAward.splice(startPos, 1);
-                                }
-                            }
-
-                            // если хоть один элемент выбран, переменная isChecked становится true
-                            isChecked = Array.from(arrayChooseItem).some(choose => {
-                                return choose.checked;
-                            })//---
-
-
-                            if(isChecked) {// если что-то выбрано, то активируем  кнопку Добавить
-                                elButtonsAddChosen.classList.remove('disabled');
-                                elButtonsAddChosen.removeAttribute('disabled');
-                            }
-                            else { // если ничего не выбрано, то кнопку Добавить деактивируем
-                                elButtonsAddChosen.classList.add('disabled');
-                                elButtonsAddChosen.setAttribute('disabled','disabled');
-                            }
-                        })
                     })
                 }
                 // Обработка запроса в поиске
@@ -2327,6 +2280,7 @@ window.addEventListener('load', () => {
                 })
                 //---
             })
+
             // Нажатие на кнопку Добавить. Добавляем выбранное из списка в модалке на страницу.
             elButtonsCallModalChoose.nextElementSibling.querySelector('.js-button-add-choose').addEventListener('click', () => {
                 counter++;
@@ -2432,6 +2386,51 @@ window.addEventListener('load', () => {
         }
     })
     //--------
+
+    function changeItem() {
+        if(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains('js-has-battle')) {
+            if(this.checked) {
+                arrayChosenBattleValue.push(this.value);// При выборе на элемент выбора заполняем массив выбранных значений
+                //arrayChosenBattleValue = Array.from(new Set(arrayChosenBattleValue1));
+                arrayChooseItemNameBattle.push(this.nextElementSibling.nextElementSibling.querySelector('div').textContent);
+                //arrayChooseItemNameBattle =Array.from(new Set(arrayChooseItemNameBattle1));
+            }
+            else {
+                // когда снимаем выбор удаляем этот элемент из массива
+                let startPos = arrayChosenBattleValue.indexOf(this.value);
+                arrayChosenBattleValue.splice(startPos, 1);
+                arrayChooseItemNameBattle.splice(startPos, 1);
+            }
+        }
+        if(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains('js-has-awards')) {
+            if(this.checked) {
+                arrayChosenAwardValue.push(this.value);// При выборе на элемент выбора заполняем массив выбранных значений
+                //arrayChosenAwardValue = Array.from(new Set(arrayChosenAwardValue1));
+                arrayChooseItemNameAward.push(this.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('div').textContent);
+                //arrayChooseItemNameAward = Array.from(new Set(arrayChooseItemNameAward1));
+            }
+            else {
+                // когда снимаем выбор удаляем этот элемент из массива
+                let startPos = arrayChosenAwardValue.indexOf(this.value);
+                arrayChosenAwardValue.splice(startPos, 1);
+                arrayChooseItemNameAward.splice(startPos, 1);
+            }
+        }
+
+        // если хоть один элемент выбран, переменная isChecked становится true
+        isChecked = Array.from(arrayChooseItem).some(choose => {
+            return choose.checked;
+        })//---
+
+        if(isChecked) {// если что-то выбрано, то активируем  кнопку Добавить
+            elButtonsAddChosen.classList.remove('disabled');
+            elButtonsAddChosen.removeAttribute('disabled');
+        }
+        else { // если ничего не выбрано, то кнопку Добавить деактивируем
+            elButtonsAddChosen.classList.add('disabled');
+            elButtonsAddChosen.setAttribute('disabled','disabled');
+        }
+    }
 
     // Выбор по радиокнопке
     arrayRadioButton.forEach((item, index) => {
