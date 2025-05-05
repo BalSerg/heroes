@@ -2011,11 +2011,28 @@ window.addEventListener('load', () => {
                     elButtonAddUrl.classList.add('disabled');
                     elButtonAddUrl.setAttribute('disabled', 'disabled');
                 }
-            });
+            })
         });
 
         arrayButtonsAddLink[index].addEventListener('click', (e) => {
             counter++;
+            let start;
+            if(elInputUrl.value.indexOf('//') > 0) { // если есть // то змаеняем все что до // на https://
+                start = elInputUrl.value.indexOf('//') + 2;
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('/') <= 6 && elInputUrl.value.indexOf('http') >= 0) { // если есть / и http, то змаеняем все что до / и http на https://
+                start = elInputUrl.value.indexOf('/');
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('\\') > 0) {
+                start = elInputUrl.value.indexOf('\\') + 2;
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('http') === 0 && elInputUrl.value.indexOf('https') === -1 && elInputUrl.value.indexOf('/') === -1) {
+                start = elInputUrl.value.indexOf('http') + 3;
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
             let div = document.createElement('DIV');
             div.classList.add('form-links__item');
             div.classList.add('js-link');
@@ -2108,6 +2125,23 @@ window.addEventListener('load', () => {
             closeModal(e.target.parentElement.parentElement.parentElement.parentElement, e.target.parentElement.parentElement.parentElement);
         })
         arrayButtonChangeLink[index].addEventListener('click', function () {
+            let start;
+            if(elInputUrl.value.indexOf('//') > 0) { // если есть // то змаеняем все что до // на https://
+                start = elInputUrl.value.indexOf('//') + 2;
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('/') <= 6 && elInputUrl.value.indexOf('http') >= 0) { // если есть / и http, то змаеняем все что до / и http на https://
+                start = elInputUrl.value.indexOf('/');
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('\\') > 0) {
+                start = elInputUrl.value.indexOf('\\') + 2;
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('http') === 0 && elInputUrl.value.indexOf('https') === -1 && elInputUrl.value.indexOf('/') === -1) {
+                start = elInputUrl.value.indexOf('http') + 3;
+                elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
             arrayModalEdit[index].classList.remove('active');
             yesScrollBody();
             if(arrayModalEdit[index].querySelector('.js-edit-url').value.length > 0) {
