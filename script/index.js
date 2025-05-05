@@ -1623,7 +1623,12 @@ window.addEventListener('load', () => {
             arrList.forEach((etem, endex) => {
                 etem.addEventListener('click', (e) => {
                     if(!arrListsValue[index].classList.contains('js-rank-list-value')) {
-                        arrListsValue[index].value = months[endex];
+                        if(endex === 0) {
+                            arrListsValue[index].value = '';
+                        }
+                        else {
+                            arrListsValue[index].value = months[endex-1];
+                        }
                         arrListsValue[index].parentElement.parentElement.classList.remove('is-error');
                     }
                     if(arrListsValue[index].classList.contains('js-required')) {
@@ -1636,7 +1641,10 @@ window.addEventListener('load', () => {
                     }
 
                     elListHidden[index].value = etem.value;
-                    numberMonth = Number(elListHidden[index].value);
+                    if(etem.value) {
+                        numberMonth = Number(elListHidden[index].value);
+                    }
+                    console.log(numberMonth);
                     if(arrListsValue[index].classList.contains('js-for-month')) {
                         let block;
                         if (arrListsValue[index].parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains('js-block')) {
@@ -1672,7 +1680,6 @@ window.addEventListener('load', () => {
                     }
                     if(numberMonth === 2) {
                         if(inputsYear[index].value) {
-
                             if(isLeapYear) {
                                 inputsDate[index].value = inputsDate[index].value >= 29 ? 29 : inputsDate[index].value;
                             }
