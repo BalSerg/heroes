@@ -771,7 +771,14 @@ function yesScrollBody() {
     document.body.style.overflow = 'auto';
 }
 let fileData,
-    this_host = 'https://forphp.ruwiki.ru'; //'https://portals.ruwiki.ru/nashi-geroi/web/api'; //
+    this_host;// = 'https://forphp.ruwiki.ru'; //'https://portals.ruwiki.ru/nashi-geroi/web/api';
+
+if(window.location.href.indexOf('portals') >=0) {
+    this_host = 'https://portals.ruwiki.ru/nashi-geroi/web/api';
+}
+else {
+    this_host = 'https://forphp.ruwiki.ru';
+}
 window.addEventListener('load', () => {
     let
         elForm = document.forms.formHero,
@@ -1644,7 +1651,6 @@ window.addEventListener('load', () => {
                     if(etem.value) {
                         numberMonth = Number(elListHidden[index].value);
                     }
-                    console.log(numberMonth);
                     if(arrListsValue[index].classList.contains('js-for-month')) {
                         let block;
                         if (arrListsValue[index].parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains('js-block')) {
