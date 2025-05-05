@@ -771,7 +771,7 @@ function yesScrollBody() {
     document.body.style.overflow = 'auto';
 }
 let fileData,
-    this_host = 'https://portals.ruwiki.ru/nashi-geroi/web/api'; //https://forphp.ruwiki.ru
+    this_host = 'https://forphp.ruwiki.ru'; //'https://portals.ruwiki.ru/nashi-geroi/web/api'; //
 window.addEventListener('load', () => {
     let
         elForm = document.forms.formHero,
