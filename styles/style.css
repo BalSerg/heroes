@@ -792,13 +792,14 @@ html.family-serif {
       .sidebar-info__item > div, .sidebar-links__item > div {
         width: 40px;
         height: 40px;
+        flex-shrink: 0;
         background-size: contain; }
       .sidebar-info__item > span, .sidebar-links__item > span {
         display: none;
         padding: 8px 16px;
-        color: var(--text-color-primary-invert);
+        color: var(--text-color-primary);
         white-space: nowrap;
-        background: var(--bg-primary-color-invert);
+        background: #E1DCCD;
         border-radius: 8px; }
       .sidebar-info__item:hover, .sidebar-links__item:hover {
         background: transparent; }

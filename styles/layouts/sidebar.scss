@@ -304,6 +304,7 @@
       >div {
         width: 40px;
         height: 40px;
+        flex-shrink: 0;
 
         background-size: contain;
       }
@@ -312,10 +313,10 @@
         display: none;
         padding: $Spacing-2 $Spacing-3;
 
-        color: var(--text-color-primary-invert);
+        color: var(--text-color-primary);
         white-space: nowrap;
 
-        background: var(--bg-primary-color-invert);
+        background: $sepia2;
         border-radius: $Radius-2;
       }
 
