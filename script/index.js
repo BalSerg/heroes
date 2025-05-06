@@ -771,13 +771,16 @@ function yesScrollBody() {
     document.body.style.overflow = 'auto';
 }
 let fileData,
-    this_host;// = 'https://forphp.ruwiki.ru'; //'https://portals.ruwiki.ru/nashi-geroi/web/api';
+    this_host,
+    addressToLand;// = 'https://forphp.ruwiki.ru'; //'https://portals.ruwiki.ru/nashi-geroi/web/api';
 
 if(window.location.href.indexOf('portals') >=0) {
     this_host = 'https://portals.ruwiki.ru/nashi-geroi/web/api';
+    addressToLand = 'https://portals.ruwiki.ru/nashi-geroi/'
 }
 else {
     this_host = 'https://forphp.ruwiki.ru';
+    addressToLand = 'https://forphp.ruwiki.ru/land/'
 }
 window.addEventListener('load', () => {
     let
@@ -910,7 +913,9 @@ window.addEventListener('load', () => {
         isPublish = false,
         isAuth = false,
 
-        elModalLoader = getElement('.js-modal-loader');
+        elModalLoader = getElement('.js-modal-loader'),
+
+        elGoToLandingLink = getElement('.js-goto-landing');
 
     // Функция проверки авторизвоан ли юзер
     function set_msg(msg) {
@@ -949,6 +954,8 @@ window.addEventListener('load', () => {
             let result = '<ul>' + Object.entries(msg.data.user_info).map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`).join('') + '</ul>';
         }*/
     }
+
+    elGoToLandingLink.href = addressToLand;
     function get_user() {
         let data_send = {};
 
@@ -1317,7 +1324,7 @@ window.addEventListener('load', () => {
 
     //Переход на главную Лендинга
     elGotoLanding.addEventListener('click', () => {
-        window.location.href = 'https://portals.ruwiki.ru/nashi-geroi'
+        window.location.href = addressToLand;
     })
 
     let elChooseList = getElement('.js-rank-list');
@@ -1680,7 +1687,12 @@ window.addEventListener('load', () => {
                             }
                         }
                         else {
-                            arrListsValue[index].value = months[endex];
+                            if(endex === 0) {
+                                arrListsValue[index].value = '';
+                            }
+                            else {
+                                arrListsValue[index].value = months[endex-1];
+                            }
                             elListHidden[index].value = etem.value;
                         }
                     }
@@ -2046,6 +2058,9 @@ window.addEventListener('load', () => {
                 start = elInputUrl.value.indexOf('http') + 3;
                 elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
             }
+            if(elInputUrl.value.indexOf('https://') === -1) {
+                elInputUrl.value = 'https://' + elInputUrl.value;
+            }
             let div = document.createElement('DIV');
             div.classList.add('form-links__item');
             div.classList.add('js-link');
@@ -2154,6 +2169,9 @@ window.addEventListener('load', () => {
             if(elInputUrl.value.indexOf('http') === 0 && elInputUrl.value.indexOf('https') === -1 && elInputUrl.value.indexOf('/') === -1) {
                 start = elInputUrl.value.indexOf('http') + 3;
                 elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
+            }
+            if(elInputUrl.value.indexOf('https://') === -1) {
+                elInputUrl.value = 'https://' + elInputUrl.value;
             }
             arrayModalEdit[index].classList.remove('active');
             yesScrollBody();
