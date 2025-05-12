@@ -2046,7 +2046,7 @@ window.addEventListener('load', () => {
                 start = elInputUrl.value.indexOf('//') + 2;
                 elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
             }
-            if(elInputUrl.value.indexOf('/') <= 6 && elInputUrl.value.indexOf('http') >= 0) { // если есть / и http, то змаеняем все что до / и http на https://
+            if(elInputUrl.value.indexOf('/') <= 6 && elInputUrl.value.indexOf('http') >= 0 && elInputUrl.value.indexOf('//') === -1) { // если есть / и http, то змаеняем все что до / и http на https://
                 start = elInputUrl.value.indexOf('/');
                 elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
             }
@@ -2054,7 +2054,7 @@ window.addEventListener('load', () => {
                 start = elInputUrl.value.indexOf('\\') + 2;
                 elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
             }
-            if(elInputUrl.value.indexOf('http') === 0 && elInputUrl.value.indexOf('https') === -1 && elInputUrl.value.indexOf('/') === -1) {
+            if(elInputUrl.value.indexOf('http') === 0 && elInputUrl.value.indexOf('https') === -1 && elInputUrl.value.indexOf('/') >= 9) {
                 start = elInputUrl.value.indexOf('http') + 3;
                 elInputUrl.value = 'https://' + elInputUrl.value.substr(start);
             }
