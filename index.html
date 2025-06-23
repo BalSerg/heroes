@@ -680,24 +680,25 @@
                             <div class="form-info">
                                 <div class="form-for-input">
                                     <div class="form-for-input__title">Фамилия<span>*</span></div>
-                                    <input class="form-for-input__input js-required js-permission-alphabet" type="text" value="" name="lastName" maxlength="25" placeholder="Фамилия" required/>
+                                    <input class="form-for-input__input js-required js-permission-alphabet js-input-field" type="text" value="" name="lastName" maxlength="25" placeholder="Фамилия" required/>
                                 </div>
                                 <div class="form-for-input">
                                     <div class="form-for-input__title">Имя<span>*</span></div>
-                                    <input class="form-for-input__input js-required js-permission-alphabet" type="text" value="" name="firstName" maxlength="20" placeholder="Имя" required/>
+                                    <input class="form-for-input__input js-required js-permission-alphabet js-input-field" type="text" value="" name="firstName" maxlength="20" placeholder="Имя" required/>
                                 </div>
                                 <div class="form-for-input">
                                     <div class="form-for-input__title">Отчество</div>
-                                    <input class="form-for-input__input js-permission-alphabet" type="text" value="" name="middleName" maxlength="25" placeholder="Отчество" required/>
+                                    <input class="form-for-input__input js-permission-alphabet js-input-field" type="text" value="" name="middleName" maxlength="25" placeholder="Отчество" required/>
                                 </div>
                                 <div class="form-for-input is-small-width">
                                     <div class="form-for-input__title">Дата рождения<span>*</span></div>
+                                    <div class="form-for-input__subtitle">Укажите дату окончания боевых действий <span>(можно указать только год, если не знаете точной даты)</span>.</div>
                                     <div class="form-for-input-wrapper">
-                                        <input class="form-for-input__input is-input-number form-date js-date js-required" name="birthDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата"/>
+                                        <input class="form-for-input__input is-input-number form-date js-date js-input-field" name="birthDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата"/>
                                         <div class="form-for-input__input form-month">
                                             <div class="form-list-data js-modal-call-button-list">
                                                 <input type="hidden" name="birthMonth" class="js-value-list-hidden">
-                                                <input class="js-value-list js-month js-required" type="text" placeholder="Месяц" value="" readonly>
+                                                <input class="js-value-list js-month" name="birthMonthValue" type="text" placeholder="Месяц" value="" readonly>
                                                 <span></span>
                                             </div>
                                             <div class="form-list js-modal-popup-list">
@@ -758,7 +759,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <input class="form-for-input__input is-input-number form-year js-year js-required" name="birthYear" type="number" min="1820" max="1939" placeholder="Год" required/>
+                                        <input class="form-for-input__input is-input-number form-year js-year js-required js-input-field" name="birthYear" type="number" min="1820" max="1939" placeholder="Год" required/>
                                     </div>
                                 </div>
                             </div>
@@ -776,7 +777,7 @@
                                             <div class="js-file-type">Поддерживаемые файлы: JPG PNG GIF</div>
                                             <div class="js-file-size">Максимальный размер файла 5 мб</div>
                                         </div>
-                                        <input class="form-upload-input js-input-file" name="photos1" type="file" value="" />
+                                        <input class="form-upload-input js-input-file js-input-field" name="photos1" type="file" value="" />
                                         <div class="form-upload-info__place-img js-place-img">
                                             <img src="" alt="" class="js-view"/>
                                             <button type="button" class="form-upload-info__remove js-del-img">
@@ -815,7 +816,7 @@
                         </div>
                         <div class="form-for-input is-no-flex">
                             <div class="form-for-input__title">Место рождения<span>*</span></div>
-                            <input class="form-for-input__input js-required js-permission-alphabetSmall" type="text" value="" name="birthPlace" placeholder="Населенный пункт" maxlength="40" required/>
+                            <input class="form-for-input__input js-required js-permission-alphabetSmall js-input-field" type="text" value="" name="birthPlace" placeholder="Населенный пункт" maxlength="40" required/>
                         </div>
                     </div>
                     <div class="form-block js-block js-has-link1" data-fill="false" data-complete="false">
@@ -824,7 +825,7 @@
                             <span>Напишите о жизни участника: образовании, семейном положении, а также о начале военной службы до начала Великой Отечественной войны. <a href="https://ru.ruwiki.ru/wiki/Королёв,_Иван_Фёдорович_(подполковник)" target="_blank">Пример</a>.</span>
                         </div>
                         <div class="form-for-input is-textarea">
-                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig txt1" placeholder="Текст" maxlength="1000" value="" name="earlyYears"></textarea>
+                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig js-input-field" placeholder="Текст" maxlength="1000" value="" name="earlyYears"></textarea>
                             <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
                         </div>
                         <div class="form-suggest">
@@ -872,16 +873,16 @@
                         </div>
                         <div class="form-for-input">
                             <div class="form-for-input__title">Место призыва</div>
-                            <input class="form-for-input__input js-maybe-complete1 js-permission-alphabetSmall" placeholder="Населенный пункт" type="text" value="" name="recruitPlace" maxlength="40"/>
+                            <input class="form-for-input__input js-maybe-complete1 js-permission-alphabetSmall js-input-field" placeholder="Населенный пункт" type="text" value="" name="recruitPlace" maxlength="40"/>
                         </div>
                         <div class="form-for-input is-half-width is-small-width">
                             <div class="form-for-input__title">Дата призыва</div>
                             <div class="form-for-input-wrapper">
-                                <input class="form-for-input__input is-input-number form-date js-date js-for-date d1" name="recruitDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
+                                <input class="form-for-input__input is-input-number form-date js-date js-for-date js-input-field" name="recruitDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
                                 <div class="form-for-input__input form-month">
                                     <div class="form-list-data js-modal-call-button-list js-button-date">
                                         <input type="hidden" name="recruitMonth" class="js-value-list-hidden js-maybe-complete2" value="">
-                                        <input class="js-value-list js-month js-for-month m1" type="text" placeholder="Месяц" value="" readonly>
+                                        <input class="js-value-list js-month js-for-month" name="recruitMonthValue" type="text" placeholder="Месяц" value="" readonly>
                                         <span></span>
                                     </div>
                                     <div class="form-list js-modal-popup-list">
@@ -942,7 +943,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <input class="form-for-input__input is-input-number form-year js-year js-year-call js-for-year y1" name="recruitYear" type="number" min="1900" max="1945" placeholder="Год"/>
+                                <input class="form-for-input__input is-input-number form-year js-year js-year-call js-for-year js-input-field" name="recruitYear" type="number" min="1900" max="1945" placeholder="Год"/>
                             </div>
                         </div>
                         <div class="form-for-input">
@@ -952,7 +953,7 @@
                                     <input type="hidden" class="is-hidden js-date d3"/>
                                     <div class="form-list-data js-modal-call-button-list js-create-list">
                                         <input type="hidden" name="rank" class="js-value-list-hidden js-rank-value-list-hidden" value="">
-                                        <input class="js-value-list js-month js-rank-list-value" type="text" placeholder="Укажите звание ветерана на момент окончания службы" value="" readonly>
+                                        <input class="js-value-list js-month js-rank-list-value" name="rankValue" type="text" placeholder="Укажите звание ветерана на момент окончания службы" value="" readonly>
                                         <span></span>
                                     </div>
                                     <div class="form-list js-modal-popup-list is-rank">
@@ -967,19 +968,19 @@
                         </div>
                         <div class="form-for-input">
                             <div class="form-for-input__title">Подразделение</div>
-                            <input class="form-for-input__input js-permission-alphabetMiddle" placeholder="Укажите название подразделения или воинской части" type="text" value="" name="subdivision" maxlength="50" required/>
+                            <input class="form-for-input__input js-permission-alphabetMiddle js-input-field" placeholder="Укажите название подразделения или воинской части" type="text" value="" name="subdivision" maxlength="50" required/>
                         </div>
                     </div>
-                    <div class="form-block js-block b2 js-has-battle">
+                    <div class="form-block js-block b2 js-has-battle js-has-link2">
                         <div class="form-subtitle">Краткое описание участия в боевых действиях<span>*</span></div>
                         <div class="form-suggest">
                             <span>Опишите участие в боевых действиях, сражениях или значимых событиях. Укажите любые награды и отличия, полученные за службу.</span>
                         </div>
                         <div class="form-for-input is-textarea">
-                            <textarea class="form-for-input__input js-textarea js-required js-permission-alphabetBig txt2" placeholder="Текст" maxlength="1000" value="" name="militaryOperations" required></textarea>
+                            <textarea class="form-for-input__input js-textarea js-required js-permission-alphabetBig js-input-field" placeholder="Текст" maxlength="1000" value="" name="militaryOperations" required></textarea>
                             <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
                         </div>
-                        <div class="form-links js-form-choose is-chosen ch1"></div>
+                        <div class="form-links js-form-choose is-chosen"></div>
                         <div class="form-button-links js-modal-call-button-add-choose is-battle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M16.1078 17.8307L3.6158 7.06171L3.6158 3.61564L7.06187 3.61564L17.8308 16.1076M14.3848 19.5537L16.9693 16.9692M19.5539 14.3846L16.9693 16.9692M16.9693 16.9692L20.4154 20.4152" stroke="#2A2823" stroke-width="1.5" stroke-linecap="round"/>
@@ -1007,13 +1008,14 @@
                         <div class="form-suggest">
                             <span>Предоставляя читателям вашей статьи ссылки на источники, вы позволяете им более глубоко изучить историю ветерана. <button type="button" class="js-call-links">Список рекомендуемых источников</button>.</span>
                         </div>
-                        <div class="form-links js-form-links"></div>
+                        <div class="form-links js-form-links lin2"></div>
                         <button type="button" class="form-button-links js-modal-call-button-add-links">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M9.1718 14.8293L14.8287 9.17241M7.05086 11.2935L5.63664 12.7077C4.07455 14.2698 4.07409 16.8027 5.63619 18.3648C7.19829 19.9269 9.7317 19.9264 11.2938 18.3643L12.7065 16.9502M11.2929 7.05049L12.7071 5.63628C14.2692 4.07418 16.8016 4.07446 18.3637 5.63656C19.9258 7.19865 19.9257 9.73134 18.3636 11.2934L16.9501 12.7076" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                             Добавить ссылки на источники
                         </button>
+                        <div class="form-button-links-suggest">Не более 5 ссылок</div>
                         <div class="modal js-modal-popup-add-links">
                             <div class="modal-wrapper js-modal-wrapper-add-links">
                                 <div class="modal-cross js-modal-cross-list"></div>
@@ -1065,7 +1067,7 @@
                                     <span>Укажите страну, регион или населенный пункт, где ветеран закончил свой боевой путь.</span>
                                 </div>
                                 <div class="form-for-input">
-                                    <input class="form-for-input__input js-permission-alphabetBig" type="text" value="" name="endCombatPathLocation" placeholder="Населенный пункт" maxlength="45" required="">
+                                    <input class="form-for-input__input js-permission-alphabetBig js-input-field" type="text" value="" name="endCombatPathLocation" placeholder="Населенный пункт" maxlength="45" required="">
                                 </div>
                                 <div class="form-for-input is-half-width is-small-width">
                                     <div class="form-for-input__title">Дата</div>
@@ -1073,11 +1075,11 @@
                                         Укажите дату завершения боевого пути
                                     </div>
                                     <div class="form-for-input-wrapper">
-                                        <input class="form-for-input__input is-input-number form-date js-date js-for-date d2" name="endCombatDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
+                                        <input class="form-for-input__input is-input-number form-date js-date js-for-date js-input-field" name="endCombatDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
                                         <div class="form-for-input__input form-month">
                                             <div class="form-list-data js-modal-call-button-list js-button-date">
                                                 <input type="hidden" name="endCombatMonth" class="js-value-list-hidden js-maybe-complete2" value="">
-                                                <input class="js-value-list js-month js-for-month m2" type="text" placeholder="Месяц" value="" readonly>
+                                                <input class="js-value-list js-month js-for-month" name="endCombatMonthValue" type="text" placeholder="Месяц" value="" readonly>
                                                 <span></span>
                                             </div>
                                             <div class="form-list js-modal-popup-list is-top-position">
@@ -1138,7 +1140,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <input class="form-for-input__input is-input-number form-year js-year js-year-endCombat js-for-year y2" name="endCombatYear" required type="number" min="1900" max="1945" placeholder="Год"/>
+                                        <input class="form-for-input__input is-input-number form-year js-year js-year-endCombat js-for-year js-input-field" name="endCombatYear" required type="number" min="1900" max="1945" placeholder="Год"/>
                                     </div>
                                 </div>
                             </div>
@@ -1180,7 +1182,7 @@
                             <span>Расскажите о ключевых моментах, которые произошли после того, как ветеран завершил военную службу. Включите в свой рассказ возвращение к гражданской жизни, поиск работы и профессиональное развитие.</span>
                         </div>
                         <div class="form-for-input is-textarea">
-                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig txt2" placeholder="Текст" maxlength="1000" value="" name="lifePostWarPeriod" required></textarea>
+                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig js-input-field" placeholder="Текст" maxlength="1000" value="" name="lifePostWarPeriod" required></textarea>
                             <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
                         </div>
                     </div>
@@ -1190,7 +1192,7 @@
                             <span>Укажите семейное положение дети если уместно, укажите количество детей и их возрасты. Опишите увлечения и интересы ветерана, такие как спорт, искусство, хобби и т.д.</span>
                         </div>
                         <div class="form-for-input is-textarea">
-                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig txt2" placeholder="Текст" maxlength="1000" value="" name="family" required></textarea>
+                            <textarea class="form-for-input__input js-textarea js-permission-alphabetBig js-input-field" placeholder="Текст" maxlength="1000" value="" name="family" required></textarea>
                             <div class="form-for-input__symbols">Осталось <span class="js-remain-symbols-value">1000</span> <span class="js-remain-symbols-text">символов</span></div>
                         </div>
                     </div>
@@ -1202,11 +1204,11 @@
                         <div class="form-for-input is-half-width is-small-width">
                             <div class="form-for-input__title">Дата</div>
                             <div class="form-for-input-wrapper">
-                                <input class="form-for-input__input is-input-number form-date js-date js-date-endLife js-for-date d3" name="endDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
+                                <input class="form-for-input__input is-input-number form-date js-date js-date-endLife js-for-date js-input-field" name="endDate" type="number" maxlength="2" min="1" max="31" placeholder="Дата" value=""/>
                                 <div class="form-for-input__input form-month">
                                     <div class="form-list-data js-modal-call-button-list js-button-date">
                                         <input type="hidden" name="endMonth" class="js-value-list-hidden" value="">
-                                        <input class="js-value-list js-month js-for-month js-month-endLife m4" type="text" placeholder="Месяц" value="" readonly>
+                                        <input class="js-value-list js-month js-for-month js-month-endLife" name="endMonthValue" type="text" placeholder="Месяц" value="" readonly>
                                         <span></span>
                                     </div>
                                     <div class="form-list js-modal-popup-list is-top-position">
@@ -1267,12 +1269,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <input class="form-for-input__input is-input-number form-year js-year js-for-year js-year-endLife y4" name="endYear" type="number" min="1941" max="2025" placeholder="Год"/>
+                                <input class="form-for-input__input is-input-number form-year js-year js-for-year js-year-endLife js-input-field" name="endYear" type="number" min="1941" max="2025" placeholder="Год"/>
                             </div>
                         </div>
                         <div class="form-for-input">
                             <div class="form-for-input__title">Место смерти</div>
-                            <input class="form-for-input__input js-input js-permission-alphabetMiddle" placeholder="Укажите место смерти" type="text" value="" name="afterPlaceDeath" maxlength="50" required/>
+                            <input class="form-for-input__input js-permission-alphabetMiddle js-input-field" placeholder="Укажите место смерти" type="text" value="" name="afterPlaceDeath" maxlength="50" required/>
                         </div>
                     </div>
                 </div>

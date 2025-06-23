@@ -1494,7 +1494,7 @@ window.addEventListener('load', () => {
                     else {
                         item.classList.remove('is-complete');
                     }*/
-                    if(elForm.lastName.value.length >= 2 && elForm.firstName.value.length >= 2 && elForm.birthDate.value.length > 0 && elForm.birthMonth.value.length > 0 && elForm.birthYear.value.length >= 4 && elForm.birthPlace.value.length >= 2) {
+                    if(elForm.lastName.value.length >= 2 && elForm.firstName.value.length >= 2 && elForm.birthYear.value.length >= 4 && elForm.birthPlace.value.length >= 2) {
                         isRequired1 = true;
                         item.classList.add('is-complete');
                     }
@@ -1533,7 +1533,7 @@ window.addEventListener('load', () => {
             arrYear = [],
             isBigMonth = false,
             data = new Date(),
-        arrDates = elSection.querySelectorAll('.js-date');
+            arrDates = elSection.querySelectorAll('.js-date');
         arrMonth = elSection.querySelectorAll('.js-month');
         arrYear = elSection.querySelectorAll('.js-year');
 
@@ -1821,7 +1821,7 @@ window.addEventListener('load', () => {
                     }
                     if(etem.classList.contains('js-for-year')) {
                         if(etem.value.length >= 4) {
-                           etem.classList.add('fill');
+                            etem.classList.add('fill');
                             checkCompleteDate(elDates, elMonth, etem, item);
                         }
                         else {
@@ -2013,7 +2013,7 @@ window.addEventListener('load', () => {
         let a = 5;
         item.addEventListener('click', () => {
             if(item.parentElement.classList.contains('js-has-link1')){
-               a = 0;
+                a = 0;
             }
             //Добавить более 5 ссылок нельзя
             if(arrayFormLinks[index].querySelectorAll('.js-link').length > 3) {
@@ -2613,8 +2613,26 @@ window.addEventListener('load', () => {
             ref3 = elForm.ref3 ? elForm.ref3.value : '' ,
             ref4 = elForm.ref4 ? elForm.ref4.value : '' ,
             ref5 = elForm.ref5 ? elForm.ref5.value : '' ,
-            valueDate = elForm.birthDate.value.length === 1 ? '0' + elForm.birthDate.value : elForm.birthDate.value,
+            valueDate,
+            birthData;
+        if(elForm.birthDate.value) {
+            valueDate = elForm.birthDate.value.length === 1 ? '0' + elForm.birthDate.value : elForm.birthDate.value;
+        }
+        else {
+            valueDate = '';
+        }
+        if(elForm.birthYear.value && elForm.birthMonth.value && valueDate) {
             birthData = elForm.birthYear.value + '-' + elForm.birthMonth.value + '-' + valueDate;
+        }
+        else if (elForm.birthYear.value && !elForm.birthMonth.value && !valueDate) {
+            birthData = elForm.recruitYear.value + '-00'+ '-00';
+        }
+        else if(elForm.recruitYear.value && elForm.birthMonth.value && !valueDate) {
+            birthData = elForm.recruitYear.value + '-' + elForm.birthMonth.value +  '-00';
+        }
+        else if(elForm.recruitYear.value && !elForm.birthMonth.value && valueDate) {
+            birthData = elForm.recruitYear.value +  '-00' + '-' + valueDate
+        }
         data_send.append('lastName', elForm.lastName.value);
         data_send.append('firstName', elForm.firstName.value);
         data_send.append('middleName', elForm.middleName.value);
@@ -2960,7 +2978,7 @@ window.addEventListener('load', () => {
         getBlocks();
         checkInputFields();
         checkDate();
-        
+
         checkYear();
         checkInputTextarea();
 
