@@ -1429,6 +1429,12 @@ html.family-serif {
       font-family: var(--fontSemibold);
       font-size: 0.875rem;
       line-height: 1.25rem; }
+  .form-for-input__suggest {
+    font-family: var(--fontRegular);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 4px 0 0;
+    color: #FF5833; }
   .form-for-input-wrapper {
     display: flex;
     align-items: center;

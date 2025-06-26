@@ -915,7 +915,8 @@ window.addEventListener('load', () => {
 
         elModalLoader = getElement('.js-modal-loader'),
 
-        elGoToLandingLink = getElement('.js-goto-landing');
+        elGoToLandingLink = getElement('.js-goto-landing'),
+        elSuggest = getElement('.js-suggest');
 
     // Функция проверки авторизвоан ли юзер
     function set_msg(msg) {
@@ -1495,7 +1496,7 @@ window.addEventListener('load', () => {
                         item.classList.remove('is-complete');
                     }*/
                     if(elForm.lastName.value.length >= 2 && elForm.firstName.value.length >= 2 && elForm.birthYear.value.length >= 4 && elForm.birthPlace.value.length >= 2) {
-                        isRequired1 = true;
+                        isRequired1 = !(elForm.birthDate.value && !elForm.birthMonth.value);
                         item.classList.add('is-complete');
                     }
                     else {
@@ -1614,6 +1615,29 @@ window.addEventListener('load', () => {
                         item.value >= data.getDate() ? item.value = data.getDate() : item.value;
                     }
                 }
+                if(!elForm.birthDate.value) {
+                    elForm.birthMonth.parentElement.parentElement.classList.remove('is-error');
+                    elSuggest.classList.add('is-hidden');
+                    if(elForm.firstName.value.length >=2 && elForm.lastName.value.length >=2 && elForm.birthYear.length >= 4 && elForm.birthPlace.value.length >=2) {
+                        isRequired1 = true;
+                    }
+                }
+            })
+            item.addEventListener('blur', () => {
+                let numberMonth = Number(arrMonth[index].previousElementSibling.value);
+                if(!numberMonth && elForm.birthDate.value) {
+                    arrMonth[index].parentElement.parentElement.classList.add('is-error');
+                    elSuggest.classList.remove('is-hidden');
+                    elSuggest.textContent = 'Необходимо ввести месяц.';
+                    isRequired1 = false;
+                }
+                else {
+                    arrMonth[index].parentElement.parentElement.classList.remove('is-error');
+                    elSuggest.classList.add('is-hidden');
+                    if(elForm.birthYear.value.length === 4) {
+                        isRequired1 = true;
+                    }
+                }
             })
         })
     }
@@ -1631,6 +1655,8 @@ window.addEventListener('load', () => {
                 inputsYear = getArray('.js-year'),
                 numberMonth,
                 arrList = wrapperList[index].querySelectorAll('.js-list');
+            item.parentElement.classList.remove('is-error');
+            elSuggest.classList.add('is-hidden');
             if(inputsYear[index].value && inputsYear[index].value % 4 === 0) {
                 isLeapYear = true;
             }
@@ -1639,6 +1665,8 @@ window.addEventListener('load', () => {
                     if(!arrListsValue[index].classList.contains('js-rank-list-value')) {
                         if(endex === 0) {
                             arrListsValue[index].value = '';
+                            inputsDate[index].value = '';
+                            inputsDate[index].focus();
                         }
                         else {
                             arrListsValue[index].value = months[endex-1];
@@ -1646,7 +1674,7 @@ window.addEventListener('load', () => {
                         arrListsValue[index].parentElement.parentElement.classList.remove('is-error');
                     }
                     if(arrListsValue[index].classList.contains('js-required')) {
-                        if(elForm.lastName.value.length >=2 && elForm.firstName.value.length >=2 && elForm.middleName.value.length >=2 && elForm.birthDate.value.length>0 && elForm.birthYear.value.length >=4 && elForm.birthPlace.value.length >=2 ) {
+                        if(elForm.lastName.value.length >=2 && elForm.firstName.value.length >=2 && elForm.birthYear.value.length >=4 && elForm.birthPlace.value.length >=2 ) {
                             isRequired1 = true;
                             showButton();
                             checkIsCompleteBlock();
@@ -1795,6 +1823,12 @@ window.addEventListener('load', () => {
                             if (etem.value > 1939) {
                                 etem.value = 1939;
                             }
+                        }
+                        if(elForm.birthYear.value.length >= 4 && elForm.birthDate.value && !elForm.birthMonth.value) {
+                            isRequired1 = false;
+                        }
+                        else {
+                            isRequired1 = true;
                         }
                         isLeapYear = etem.value % 4 === 0;
                         numberMonth = Number(elMonth.previousElementSibling.value);
@@ -2625,13 +2659,13 @@ window.addEventListener('load', () => {
             birthData = elForm.birthYear.value + '-' + elForm.birthMonth.value + '-' + valueDate;
         }
         else if (elForm.birthYear.value && !elForm.birthMonth.value && !valueDate) {
-            birthData = elForm.recruitYear.value + '-00'+ '-00';
+            birthData = elForm.birthYear.value + '-00'+ '-00';
         }
-        else if(elForm.recruitYear.value && elForm.birthMonth.value && !valueDate) {
-            birthData = elForm.recruitYear.value + '-' + elForm.birthMonth.value +  '-00';
+        else if(elForm.birthYear.value && elForm.birthMonth.value && !valueDate) {
+            birthData = elForm.birthYear.value + '-' + elForm.birthMonth.value +  '-00';
         }
-        else if(elForm.recruitYear.value && !elForm.birthMonth.value && valueDate) {
-            birthData = elForm.recruitYear.value +  '-00' + '-' + valueDate
+        else if(elForm.birthYear.value && !elForm.birthMonth.value && valueDate) {
+            birthData = elForm.birthYear.value +  '-00' + '-' + valueDate
         }
         data_send.append('lastName', elForm.lastName.value);
         data_send.append('firstName', elForm.firstName.value);
@@ -2988,16 +3022,22 @@ window.addEventListener('load', () => {
     })
 
     function fn() {
-        waiting();
-        if(numberSection === 2 && isNotAlive) {
-            saveState2();
-            stateFinal();
+        if(isRequired2) {
+            openModal(getElement('.js-modal-popup-final'), getElement('.js-modal-wrapper-final'))
             waiting();
+            if(numberSection === 2 && isNotAlive) {
+                saveState2();
+                stateFinal();
+                waiting();
+            }
+            if(numberSection === 3) {
+                saveState3();
+                stateFinal();
+                waiting();
+            }
         }
-        if(numberSection === 3) {
-            saveState3();
-            stateFinal();
-            waiting();
+        else  {
+            showEmptyRequiredField();
         }
     }
     elPublish.addEventListener('click', fn, {

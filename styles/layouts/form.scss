@@ -107,6 +107,14 @@
       }
     }
 
+    &__suggest {
+      @include font14;
+
+      margin: $Spacing-1 0 0;
+
+      color: $orange;
+    }
+
     &-wrapper {
       display: flex;
       align-items: center;
