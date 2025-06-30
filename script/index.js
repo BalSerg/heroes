@@ -916,7 +916,12 @@ window.addEventListener('load', () => {
         elModalLoader = getElement('.js-modal-loader'),
 
         elGoToLandingLink = getElement('.js-goto-landing'),
-        elSuggest = getElement('.js-suggest');
+        elSuggest = getElement('.js-suggest'),
+
+        arrayChosenBattleValue = [],// массив выбранных значений
+        arrayChooseItemNameBattle = [],
+        arrayChosenAwardValue = [],// массив выбранных значений
+        arrayChooseItemNameAward = [];
 
     // Функция проверки авторизвоан ли юзер
     function set_msg(msg) {
@@ -1053,11 +1058,9 @@ window.addEventListener('load', () => {
             elLayerBackground = document.createElement('DIV');
             elLayerBackground.classList.add('opacity-layer');
             //Закрытие модалок если нажали мимо модалки
-            elLayerBackground.addEventListener('click', () => {
-                arrayModals.forEach((item, index) => {
-                    closeModal(modal, wrapperModal);
-                    arrayButtonsCallModal[index].classList.remove('active');
-                })
+            elLayerBackground.addEventListener('click', function() {
+                this.parentElement.previousElementSibling.classList.remove('active');
+                closeModal(modal, wrapperModal);
             })
             modal.append(elLayerBackground);
         }
@@ -1091,6 +1094,88 @@ window.addEventListener('load', () => {
         }
         if(elLayerBackground) {
             elLayerBackground.remove();
+        }
+        if(modal.classList.contains('js-modal-popup-choose')) {
+            if(modal.querySelector('.js-modal-wrapper-choose').classList.contains('is-battle')) {
+                let countChosenOnPage,//кол-во выбранных на странице
+                    arrayCheckedInModal = [], //массив выбранных в модалке
+                    arrayChosenOnPage = [];
+                modal.querySelectorAll('.js-choose').forEach((item) => {
+                    if(item.checked === true) {
+                        arrayCheckedInModal.push(item);
+                    }
+                })
+                countChosenOnPage = getElement('.js-has-battle .js-form-choose').childElementCount;
+                if(!countChosenOnPage) {
+                    arrayCheckedInModal.forEach((item) => {
+                        item.checked = false;
+                        arrayChooseItemNameBattle = [];
+                        arrayChosenBattleValue = [];
+                    })
+                }
+                else {
+                    getArray('.js-has-battle .js-chosen-value').forEach((item) => {
+                        arrayChosenOnPage.push(item);
+                    })
+                    let startPos,
+                        startPos1;
+                    if(arrayChosenOnPage.length < arrayCheckedInModal.length) {
+                        arrayCheckedInModal.forEach((item, index) => {
+                            if(!arrayChosenOnPage[index]) {
+                                item.checked = false;
+                                startPos = arrayChosenBattleValue.indexOf(item.value);
+                                if(startPos >= 0) {
+                                    arrayChosenBattleValue.splice(startPos, 1);
+                                }
+                                startPos1 = arrayChooseItemNameBattle.indexOf(item.nextElementSibling.nextElementSibling.firstElementChild.value);
+                                if(startPos1 >= 0) {
+                                    arrayChooseItemNameBattle.splice(startPos1, 1);
+                                }
+                            }
+                        })
+                    }
+                }
+            }
+            if(modal.querySelector('.js-modal-wrapper-choose').classList.contains('is-awards')) {
+                let countChosenOnPage,//кол-во выбранных на странице
+                    arrayCheckedInModal = [], //массив выбранных в модалке
+                    arrayChosenOnPage = [];
+                modal.querySelectorAll('.js-choose').forEach((item) => {
+                    if(item.checked === true) {
+                        arrayCheckedInModal.push(item);
+                    }
+                })
+                countChosenOnPage = getElement('.js-has-awards .js-form-choose').childElementCount;
+                if(!countChosenOnPage) {
+                    arrayCheckedInModal.forEach((item) => {
+                        item.checked = false;
+                        arrayChosenAwardValue = [];
+                        arrayChooseItemNameAward = [];
+                    })
+                }
+                else {
+                    getArray('.js-has-awards .js-chosen-value').forEach((item) => {
+                        arrayChosenOnPage.push(item);
+                    })
+                    let startPos,
+                        startPos1;
+                    if(arrayChosenOnPage.length < arrayCheckedInModal.length) {
+                        arrayCheckedInModal.forEach((item, index) => {
+                            if(!arrayChosenOnPage[index]) {
+                                item.checked = false;
+                                startPos = arrayChosenAwardValue.indexOf(item.value);
+                                if(startPos >= 0) {
+                                    arrayChosenAwardValue.splice(startPos, 1);
+                                }
+                                startPos1 = arrayChooseItemNameAward.indexOf(item.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value);
+                                if(startPos1 >= 0) {
+                                    arrayChooseItemNameAward.splice(startPos1, 1);
+                                }
+                            }
+                        })
+                    }
+                }
+            }
         }
         elHeader.classList.remove('zIndex0');
     }
@@ -2248,14 +2333,13 @@ window.addEventListener('load', () => {
 
     //Создание модалок выбора из списка, добавление выбоанноо из списка на страницу и удаление выббранного из списка
     let counter = 0,
-        arrayChosenBattleValue = [],// массив выбранных значений
+
         arrayChosenBattleValue1 = [],// массив выбранных значений
-        arrayChosenAwardValue = [],// массив выбранных значений
+
         isChecked = false,
         arrayChooseItem = [],
-        arrayChooseItemNameBattle = [],
         arrayChooseItemNameBattle1 = [],
-        arrayChooseItemNameAward = [],
+
         arrayChooseItemNameAward1 = [],
         arrayChosenAwardValue1 = [],
         arrayData = [],
@@ -2665,7 +2749,7 @@ window.addEventListener('load', () => {
             birthData = elForm.birthYear.value + '-' + elForm.birthMonth.value +  '-00';
         }
         else if(elForm.birthYear.value && !elForm.birthMonth.value && valueDate) {
-            birthData = elForm.birthYear.value +  '-00' + '-' + valueDate
+            birthData = elForm.birthYear.value +  '-00' + '-00'
         }
         data_send.append('lastName', elForm.lastName.value);
         data_send.append('firstName', elForm.firstName.value);
@@ -2724,7 +2808,7 @@ window.addEventListener('load', () => {
             recruitData = elForm.recruitYear.value + '-' + elForm.recruitMonth.value +  '-00';
         }
         else if(elForm.recruitYear.value && !elForm.recruitMonth.value && valueDateEndCombat) {
-            recruitData = elForm.recruitYear.value +  '-00' + '-' + valueDateEndCombat
+            recruitData = elForm.recruitYear.value +  '-00' + '-00';
         }
         else {
             recruitData ='';
@@ -2745,7 +2829,7 @@ window.addEventListener('load', () => {
             endCombatPathData = elForm.endCombatYear.value + '-' + elForm.endCombatMonth.value +  '-00';
         }
         else if(elForm.endCombatYear.value && !elForm.endCombatMonth.value && valueDateEndCombat) {
-            endCombatPathData = elForm.endCombatYear.value +  '-00' + '-' + valueDateEndCombat
+            endCombatPathData = elForm.endCombatYear.value +  '-00' + '-00';
         }
         else {
             endCombatPathData = '';
@@ -2809,7 +2893,7 @@ window.addEventListener('load', () => {
             endData = elForm.endYear.value + '-' + elForm.endMonth.value +  '-00';
         }
         else if(elForm.endCombatYear.value && !elForm.endCombatMonth.value && valueDateEnd) {
-            endData = elForm.endYear.value +  '-00' + '-' + valueDateEnd
+            endData = elForm.endYear.value +  '-00' + '-00'
         }
         else {
             endData = '';
