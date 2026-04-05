@@ -1,0 +1,23 @@
+.navbar {
+  @include font16-Lora-semibold;
+
+  max-width: 1240px;
+  //width: 75.8%;
+  margin: 0 auto $Spacing-7;
+  display: flex;
+  align-items: center;
+  gap: 0 $Spacing-3;
+
+  &__item {
+    color: var(--text-color-primary);
+    white-space: nowrap;
+
+    cursor: pointer;
+  }
+}
+
+@include mobile {
+  .navbar {
+    margin: 0 auto $Spacing-5;
+  }
+}

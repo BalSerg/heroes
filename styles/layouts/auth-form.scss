@@ -1,0 +1,116 @@
+.auth-form {
+  max-width: 470px;
+  margin: 0 auto;
+
+  &-content {
+    padding: $Spacing-5;
+    margin: 0 0 $Spacing-5;
+
+    box-shadow: 0 4px 24px 0 rgba(113, 106, 92, 0.16);
+    background: $sepia;
+    border: 1px solid $sepia2;
+    border-radius: $Radius-1;
+  }
+
+  &-title {
+    @include font20-Lora-semibold;
+
+    margin: 0 0 $Spacing-5;
+
+    color: $orange;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .form-for-input {
+    margin: 0 0 $Spacing-3;
+
+    &__title {
+      margin: 0 0 $Spacing-2;
+    }
+
+    &__input {
+      margin: 0 !important;
+    }
+  }
+
+  &-link {
+    @include font14;
+
+    margin: $Spacing-5 0 0;
+
+    color: var(--text-color-primary);
+    text-align: center;
+
+    > a {
+      @include font14-bold;
+
+      color: var(--text-color-primary);
+
+      border-bottom: 1px solid transparent;
+
+      transition: $transition-out;
+
+      &:hover {
+        border-bottom: 1px solid var(--text-color-primary);
+
+        transition: $transition-in;
+      }
+    }
+  }
+
+  &-button {
+    @include font20-bold;
+    @include button-colored($white, $orange, $orange2);
+
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto $Spacing-4;
+    display: block;
+  }
+
+  &-subtext {
+    @include font12;
+
+    max-width: 350px;
+    margin: 0 auto;
+
+    color: var(--text-color-primary);
+    text-align: center;
+
+    > a {
+      color: $link;
+    }
+  }
+}
+
+@include tablet {
+  .auth-form {
+    &-button {
+      max-width: none;
+    }
+  }
+}
+
+@include mobile {
+  .auth-form {
+    &-content {
+      padding: $Spacing-3;
+      margin: 0 0 $Spacing-9;
+    }
+
+    &-title {
+      @include font16-Lora-semibold;
+
+      margin: 0 0 $Spacing-4;
+    }
+
+    .form-for-input {
+      margin: 0 0 $Spacing-2;
+    }
+
+    &-link {
+      margin: $Spacing-4 0 0;
+    }
+  }
+};
